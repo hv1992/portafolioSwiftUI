@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct OptionMainView: View {
-    var text : String = ""
-    var logoName : String = ""
+struct OptionMainView: View,Identifiable {
+    var viewModel : OptionMainViewModel
+    var id : UUID = UUID() //Este es un identificador de la vista para ser usado por un ForEach, o un List
+    
+    init() {
+        self.viewModel = OptionMainViewModel()
+    }
     
     var body: some View {
-        HStack(spacing: 10.0) {
-            Text(self.text).font(.largeTitle)
-            Image(self.logoName)
+        HStack {
+            Image(self.viewModel.nameLogo ?? "")
+            Text(self.viewModel.titleOption ?? "")
         }
     }
 }

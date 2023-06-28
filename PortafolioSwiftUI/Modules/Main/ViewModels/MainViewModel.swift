@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class MainViewModel {
+    let listOptionsMenu : [MenuOptionModel] = [
+        MenuOptionModel(nameIcon: "catIcon",titleMenuOption: "Cat Randoms Image")
+    ]
+    
+    let nameAvatarHeader : String = "avatarMainMenu"
+    let informationHeader : String = "Hugo Alejandro Sebastián Villagra Bogarin"
+    
+    let titleListMenus : String = "Menu"
+    
+}

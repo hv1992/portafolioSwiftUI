@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct MainView: View {
+    var viewModel : MainViewModel
+    var optionsView : [OptionMainView] = []
+    var headerView : HeaderMainView
+    
+    init() {
+        self.viewModel = MainViewModel()
+        for menu in self.viewModel.listOptionsMenu{
+            var optionMain = OptionMainView()
+            optionMain.viewModel.nameLogo = menu.nameIcon 
+            optionMain.viewModel.titleOption = menu.titleMenuOption
+            self.optionsView.append(optionMain)
+        }
+        
+        self.headerView = HeaderMainView()
+        self.headerView.viewModel.nameAvatar = self.viewModel.nameAvatarHeader
+        self.headerView.viewModel.informationAvatar = self.viewModel.informationHeader
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            self.headerView
+            Text(self.viewModel.titleListMenus).font(.largeTitle)
+            ForEach(optionsView) { view in
+                view
+            }
+            Spacer() //Esto es para completar el espacio libre
         }
-        .padding()
+        
     }
 }
 
