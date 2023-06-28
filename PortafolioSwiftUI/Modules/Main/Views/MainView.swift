@@ -34,18 +34,18 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack {
-            self.headerView
-            Text(self.viewModel.titleListMenus).font(.largeTitle).bold()
-            ForEach(optionsView) { view in
-                Button(action: {
-                    print("Abriendo un menu")
-                }) {
-                    view
+        NavigationView {
+            VStack {
+                self.headerView
+                Text(self.viewModel.titleListMenus).font(.largeTitle).bold()
+                ForEach(optionsView) { view in
+                    NavigationLink(destination: RandomCatsView()) {
+                        view
+                    }
                 }
-            }
-            Spacer() //Esto es para completar el espacio libre
-        }.background(LinearGradient(colors: [.blue,self.skyBlue], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea(.all)) //Tengo que poner el ignoreSafeArea dentro del LinearGradient para que cubra todo el fondo sin que los elementos se vayan al safe area.
+                Spacer() //Esto es para completar el espacio libre
+            }.background(LinearGradient(colors: [.blue,self.skyBlue], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea(.all)) //Tengo que poner el ignoreSafeArea dentro del LinearGradient para que cubra todo el fondo sin que los elementos se vayan al safe area.
+        }
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53649E22A4CD19400E6F632 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E12A4CD19400E6F632 /* CatModel.swift */; };
+		C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */; };
+		C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */; };
 		C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */; };
 		C59191922A44DB9D003B48F1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59191912A44DB9D003B48F1 /* MainView.swift */; };
 		C59191942A44DB9E003B48F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59191932A44DB9E003B48F1 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C53649E12A4CD19400E6F632 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
+		C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsView.swift; sourceTree = "<group>"; };
+		C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsViewModel.swift; sourceTree = "<group>"; };
 		C591918C2A44DB9D003B48F1 /* PortafolioSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortafolioSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortafolioSwiftUIApp.swift; sourceTree = "<group>"; };
 		C59191912A44DB9D003B48F1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C53649DD2A4CCF1C00E6F632 /* RandomCats */ = {
+			isa = PBXGroup;
+			children = (
+				C53649E02A4CCF3B00E6F632 /* Models */,
+				C53649DF2A4CCF3200E6F632 /* ViewModels */,
+				C53649DE2A4CCF2A00E6F632 /* Views */,
+			);
+			path = RandomCats;
+			sourceTree = "<group>";
+		};
+		C53649DE2A4CCF2A00E6F632 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C53649DF2A4CCF3200E6F632 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C53649E02A4CCF3B00E6F632 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C53649E12A4CD19400E6F632 /* CatModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C53649E92A4CD71600E6F632 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C59191832A44DB9D003B48F1 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +155,7 @@
 		C591918E2A44DB9D003B48F1 /* PortafolioSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C53649E92A4CD71600E6F632 /* Network */,
 				C59191BC2A44DD3E003B48F1 /* Modules */,
 				C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */,
 				C59191932A44DB9E003B48F1 /* Assets.xcassets */,
@@ -144,6 +192,7 @@
 		C59191BC2A44DD3E003B48F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C53649DD2A4CCF1C00E6F632 /* RandomCats */,
 				C59191BD2A44DD47003B48F1 /* Main */,
 			);
 			path = Modules;
@@ -331,12 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */,
+				C53649E22A4CD19400E6F632 /* CatModel.swift in Sources */,
 				C5E8307D2A45F87C00397EAD /* MainViewModel.swift in Sources */,
 				C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */,
 				C59191922A44DB9D003B48F1 /* MainView.swift in Sources */,
 				C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */,
 				C5E830822A461A9600397EAD /* HeaderMainViewModel.swift in Sources */,
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
+				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
 			);
@@ -494,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortafolioSwiftUI/Preview Content\"";
@@ -503,8 +556,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,9 +565,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = user.HugoVillagra.PortafolioSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,6 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortafolioSwiftUI/Preview Content\"";
@@ -533,8 +589,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,9 +598,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = user.HugoVillagra.PortafolioSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
