@@ -16,8 +16,13 @@ struct HeaderMainView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(self.viewModel.nameAvatar ?? "").resizable().frame(width: 100).cornerRadius(50)
+            Image(self.viewModel.nameAvatar ?? "")
+                .resizable()
+                .frame(width: 100)
+                .cornerRadius(50)
+                .shadow(radius: 10)
             Text(self.viewModel.informationAvatar ?? "")
+                .bold()
                 .multilineTextAlignment(.center)
                 .padding(.all)
         }.frame(height: 100)
