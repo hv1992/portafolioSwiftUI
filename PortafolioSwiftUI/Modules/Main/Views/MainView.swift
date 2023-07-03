@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    //Binding: es la conexion entre una propiedad que almacena datos (variable) y una vista que cambia el valor (Textfield).
+    //Para usar el Binding, se usa el signo de $ delante de la variable.
+    
+    // el @State es para que puedas modificar variables en una función. Si no tiene el @State, es de solo lectura.
     var viewModel : MainViewModel
     var optionsView : [OptionMainView] = []
     var headerView : HeaderMainView
@@ -33,18 +38,33 @@ struct MainView: View {
         self.headerView.viewModel.informationAvatar = self.viewModel.informationHeader
     }
     
+    //MARK : Hacer despues el acerca de con .sheet (modal)
     var body: some View {
         NavigationView {
             VStack {
                 self.headerView
                 Text(self.viewModel.titleListMenus).font(.largeTitle).bold()
                 ForEach(optionsView) { view in
+                    //El NavigationLink es el que hace que nosotros podamos pasar a la siguiente pantalla.
                     NavigationLink(destination: RandomCatsView()) {
                         view
                     }
                 }
                 Spacer() //Esto es para completar el espacio libre
             }.background(LinearGradient(colors: [.blue,self.skyBlue], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea(.all)) //Tengo que poner el ignoreSafeArea dentro del LinearGradient para que cubra todo el fondo sin que los elementos se vayan al safe area.
+                .onAppear {
+                    print("cargo la vista VStack")
+                }
+                .onDisappear {
+                    print("desaparece la vista VStack")
+                }
+            
+        //Esto es para controlar el ciclo de vida de cada view, que en este caso el view es el NavigationView (Cada vista tiene su ciclo de vida propio).
+        }.onAppear {
+            print("cargo la vista NavigationView")
+        }
+        .onDisappear {
+            print("desaparece la vista NavigationView")
         }
     }
 }

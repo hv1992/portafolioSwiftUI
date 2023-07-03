@@ -15,8 +15,9 @@ struct RandomCatsView: View {
     }
     
     var body: some View {
+        //Vamos a usar el grid para mostrar las imagenes de los gatos, con scrollView.
         NavigationView {
-            Text("hola")
+            
         }.navigationTitle(self.viewModel.titleNavigationBar)
     }
 }
