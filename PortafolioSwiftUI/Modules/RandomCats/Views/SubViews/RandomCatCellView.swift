@@ -7,13 +7,20 @@
 
 import SwiftUI
 
-struct RandomCatCellView: View {
+struct RandomCatCellView: View,Identifiable {
+    var id = UUID()
     
-    @StateObject var viewModel : RandomCatCellViewModel = RandomCatCellViewModel()
+    @State var imageCat : Image?
+    @State var textOwner : Text?
     
     var body: some View {
         HStack {
-            
+            if imageCat != nil {
+                imageCat
+            }
+            if textOwner != nil {
+                textOwner
+            }
         }
     }
 }

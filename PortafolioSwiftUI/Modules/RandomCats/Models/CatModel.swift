@@ -16,4 +16,19 @@ struct CatModel: Codable,Identifiable {
         case id = "_id"
         case tags, owner, createdAt, updatedAt
     }
+    
+    func getUrlImageDownload() -> String? {
+        if let idTemp = self.id {
+            return "https://cataas.com/cat/\(idTemp)"
+        } else {
+            return nil
+        }
+    }
+    
+    func getOwner() -> String? {
+        if let ownerTemp = self.owner {
+            return ownerTemp == "null" ? nil : ownerTemp
+        }
+        return nil
+    }
 }
