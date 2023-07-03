@@ -15,21 +15,16 @@ class RandomCatsViewModel : ObservableObject {
     let titleNavigationBar : String = "Random Cats Image"
     
     let urlBaseUrlImageCat : String = "https://cataas.com/cat/"
+    let urlBaseGetCats : String = "https://cataas.com/api/cats"
     
     func getCats() {
         let parameters : Parameters = [
             "limit" : 10
         ]
         
-        AF.request("https://cataas.com/api/cats",parameters: parameters).responseDecodable(of:[CatModel].self) { response in
-            switch(response.result) {
-                case .success(let cats):
-                    self.listCatRandom = cats
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    break
-            }
-        }
+        HttpRequest.shared.requestCodable(urlString: self.urlBaseGetCats, parameters: parameters, headers: nil, onSuccess: { (cats : [CatModel]) in 
+            self.listCatRandom = cats
+        }, onError: nil)
+        
     }
 }
