@@ -13,7 +13,7 @@ struct RandomCatCellView: View,Identifiable {
     var imageCat : Image?
     var textInformation : Text?
     
-    @State var opacityValue : CGFloat = 0.0
+    @State var opacityValue : CGFloat = 0.0 //Con esto establecemos el nivel de opacidad que va a tener nuestra imagen.
     
     init(imageCat : Image? = nil,textInformation : Text? = nil) {
         self.imageCat = imageCat
@@ -26,12 +26,14 @@ struct RandomCatCellView: View,Identifiable {
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(8)
-                .opacity(opacityValue)
-                .animation(.linear(duration: 0.5), value: opacityValue)
+                .opacity(opacityValue) //Establecemos la opacidad
+                .animation(.easeInOut(duration: 0.5), value: opacityValue) //Lo que hace el animación es generar una transición de tiempo de llegar de un valor a otro, cuyo valor final se establece en el .onAppear. El value es el valor en la cual va a sufrir dicha transición
                 .onAppear {
                     opacityValue = 1.0
                 }
             textInformation
+                .opacity(opacityValue)
+                .animation(.easeInOut(duration: 0.5), value: opacityValue)
         }
     }
 }
