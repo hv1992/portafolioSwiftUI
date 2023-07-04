@@ -25,10 +25,10 @@ struct CatModel: Codable,Identifiable {
         }
     }
     
-    func getOwner() -> String? {
+    func getOwner() -> String {
         if let ownerTemp = self.owner {
-            return ownerTemp == "null" ? nil : ownerTemp
+            return ownerTemp == "null" ? "" : ownerTemp
         }
-        return nil
+        return "Desconocido"
     }
 }

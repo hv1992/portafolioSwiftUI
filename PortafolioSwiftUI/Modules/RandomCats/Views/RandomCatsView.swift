@@ -20,7 +20,7 @@ struct RandomCatsView: View {
                 Task {
                     await viewModel.loadListCats()
                     for cat in self.viewModel.listCatRandom {
-                        await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.owner ?? "No tiene")
+                        await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.getOwner())
                     }
                 }
             }.listStyle(.plain)
