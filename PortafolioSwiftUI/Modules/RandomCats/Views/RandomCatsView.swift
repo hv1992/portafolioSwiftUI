@@ -21,7 +21,6 @@ struct RandomCatsView: View {
                     await viewModel.loadListCats()
                     for cat in self.viewModel.listCatRandom {
                         await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.owner ?? "No tiene")
-                            
                     }
                 }
             }.listStyle(.plain)
@@ -38,7 +37,7 @@ struct RandomCatsView: View {
             let text = Text(informationCat)
             
             let randomCatCell : RandomCatCellView = RandomCatCellView(imageCat: imageCat,textInformation: text)
-            self.$listViewCats.wrappedValue.append(randomCatCell)
+            self.listViewCats.append(randomCatCell)
         } catch let error {
             print(error.localizedDescription)
         }

@@ -18,9 +18,11 @@ class RandomCatsViewModel : ObservableObject {
     let urlBaseUrlImageCat : String = "https://cataas.com/cat/"
     let urlBaseGetCats : String = "https://cataas.com/api/cats"
     
+    let countCatImages : Int = 10
+    
     private func getCats() async -> [CatModel]? {
         let parameters : Parameters = [
-            "limit" : 10
+            "limit" : self.countCatImages
         ]
         
         do {
