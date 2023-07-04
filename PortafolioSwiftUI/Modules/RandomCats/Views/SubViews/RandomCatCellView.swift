@@ -13,6 +13,8 @@ struct RandomCatCellView: View,Identifiable {
     var imageCat : Image?
     var textInformation : Text?
     
+    @State var opacityValue : CGFloat = 0.0
+    
     init(imageCat : Image? = nil,textInformation : Text? = nil) {
         self.imageCat = imageCat
         self.textInformation = textInformation
@@ -20,7 +22,15 @@ struct RandomCatCellView: View,Identifiable {
     
     var body: some View {
         VStack(alignment: .center) {
-            imageCat?.resizable().scaledToFit()
+            imageCat?
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(8)
+                .opacity(opacityValue)
+                .animation(.linear(duration: 0.5), value: opacityValue)
+                .onAppear {
+                    opacityValue = 1.0
+                }
             textInformation
         }
     }

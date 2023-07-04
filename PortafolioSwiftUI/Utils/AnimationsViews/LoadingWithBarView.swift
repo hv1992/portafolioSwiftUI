@@ -36,6 +36,6 @@ struct LoadingWithBarView: View {
 
 struct LoadingWithBarView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingWithBarView()
+        LoadingWithBarView().previewLayout(.sizeThatFits)
     }
 }
