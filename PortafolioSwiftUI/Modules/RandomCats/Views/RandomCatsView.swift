@@ -14,8 +14,8 @@ struct RandomCatsView: View {
     var body: some View {
         //Vamos a usar el grid para mostrar las imagenes de los gatos, con scrollView.
         NavigationView {
-            List($listViewCats) { cat in
-                cat.wrappedValue
+            List(listViewCats) { cat in
+                cat
             }.onAppear {
                 Task {
                     await viewModel.loadListCats()
