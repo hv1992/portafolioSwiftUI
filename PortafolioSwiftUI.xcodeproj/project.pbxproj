@@ -10,6 +10,7 @@
 		C53649E22A4CD19400E6F632 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E12A4CD19400E6F632 /* CatModel.swift */; };
 		C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */; };
 		C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */; };
+		C5380E9D2A53A30D0000B0D0 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5380E9C2A53A30D0000B0D0 /* ImageExtension.swift */; };
 		C58049AB2A51E76100DFB03D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58049AA2A51E76100DFB03D /* AppDelegate.swift */; };
 		C58049AE2A5241CE00DFB03D /* RandomCatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58049AD2A5241CE00DFB03D /* RandomCatCellView.swift */; };
 		C58049B02A5241E400DFB03D /* RandomCatCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58049AF2A5241E400DFB03D /* RandomCatCellViewModel.swift */; };
@@ -51,6 +52,7 @@
 		C53649E12A4CD19400E6F632 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
 		C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsView.swift; sourceTree = "<group>"; };
 		C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsViewModel.swift; sourceTree = "<group>"; };
+		C5380E9C2A53A30D0000B0D0 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		C58049AA2A51E76100DFB03D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58049AD2A5241CE00DFB03D /* RandomCatCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatCellView.swift; sourceTree = "<group>"; };
 		C58049AF2A5241E400DFB03D /* RandomCatCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatCellViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,30 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		C5380E992A53A2DB0000B0D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C5380E9A2A53A2E70000B0D0 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C5380E9A2A53A2E70000B0D0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5380E9B2A53A2FB0000B0D0 /* Image */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C5380E9B2A53A2FB0000B0D0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C5380E9C2A53A30D0000B0D0 /* ImageExtension.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		C58049AC2A52419100DFB03D /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +200,7 @@
 		C591918E2A44DB9D003B48F1 /* PortafolioSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C5380E992A53A2DB0000B0D0 /* Utils */,
 				C53649E92A4CD71600E6F632 /* Network */,
 				C59191BC2A44DD3E003B48F1 /* Modules */,
 				C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */,
@@ -415,6 +442,7 @@
 				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
+				C5380E9D2A53A30D0000B0D0 /* ImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

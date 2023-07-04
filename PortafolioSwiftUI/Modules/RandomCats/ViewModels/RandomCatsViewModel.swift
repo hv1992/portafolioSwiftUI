@@ -10,21 +10,49 @@ import Alamofire
 
 class RandomCatsViewModel : ObservableObject {
     
-    @Published var listCatRandom : [CatModel] = []
+    @MainActor @Published var listCatRandom : [CatModel] = []
+    @MainActor @Published var errorMessageListCats = ""
     
     let titleNavigationBar : String = "Random Cats Image"
     
     let urlBaseUrlImageCat : String = "https://cataas.com/cat/"
     let urlBaseGetCats : String = "https://cataas.com/api/cats"
     
-    func getCats() {
+    private func getCats() async -> [CatModel]? {
         let parameters : Parameters = [
             "limit" : 10
         ]
         
-        HttpRequest.shared.requestCodable(urlString: self.urlBaseGetCats, parameters: parameters, headers: nil, onSuccess: { (cats : [CatModel]) in 
-            self.listCatRandom = cats
-        }, onError: nil)
+        do {
+            let catList : [CatModel] = try await HttpRequest.shared.requestCodable(urlString: self.urlBaseGetCats, parameters: parameters, headers: nil)
+            return catList
+        } catch let error {
+            print(error.localizedDescription)
+            return nil
+        }
         
     }
+    
+    
+    
+    func loadListCats() async {
+        await MainActor.run {
+            self.errorMessageListCats = ""
+        }
+        
+        if let listCats = await self.getCats() {
+            await MainActor.run {
+                self.listCatRandom = listCats
+            }
+        } else {
+            await MainActor.run {
+                self.errorMessageListCats = "Error fetch data"
+            }
+        }
+    }
+    
+    func getUrlCatImage(idImageCat : String) -> String{
+        return self.urlBaseUrlImageCat + idImageCat
+    }
+    
 }

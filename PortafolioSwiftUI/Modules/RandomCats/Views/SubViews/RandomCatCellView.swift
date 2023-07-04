@@ -10,17 +10,18 @@ import SwiftUI
 struct RandomCatCellView: View,Identifiable {
     var id = UUID()
     
-    @State var imageCat : Image?
-    @State var textOwner : Text?
+    var imageCat : Image?
+    var textInformation : Text?
+    
+    init(imageCat : Image? = nil,textInformation : Text? = nil) {
+        self.imageCat = imageCat
+        self.textInformation = textInformation
+    }
     
     var body: some View {
-        HStack {
-            if imageCat != nil {
-                imageCat
-            }
-            if textOwner != nil {
-                textOwner
-            }
+        VStack(alignment: .center) {
+            imageCat?.resizable().scaledToFit()
+            textInformation
         }
     }
 }

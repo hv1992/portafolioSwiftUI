@@ -8,35 +8,42 @@
 import SwiftUI
 
 struct RandomCatsView: View {
-    @ObservedObject var viewModel : RandomCatsViewModel
+    @ObservedObject var viewModel : RandomCatsViewModel = RandomCatsViewModel()
     @State var listViewCats : [RandomCatCellView] = []
-    
-    init() {
-        self.viewModel = RandomCatsViewModel()
-    }
     
     var body: some View {
         //Vamos a usar el grid para mostrar las imagenes de los gatos, con scrollView.
         NavigationView {
-            List(listViewCats) { catView in
-                catView.frame(height:100)
-            }
+            List($listViewCats) { cat in
+                cat.wrappedValue
+            }.onAppear {
+                Task {
+                    await viewModel.loadListCats()
+                    for cat in self.viewModel.listCatRandom {
+                        await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.owner ?? "No tiene")
+                            
+                    }
+                }
+            }.listStyle(.plain)
         }.navigationTitle(self.viewModel.titleNavigationBar)
     }
     
-    func createRandomCatCell(cat : CatModel) {
-        if let urlString = cat.getUrlImageDownload() {
-            HttpRequest.shared.downloadImage(urlString: urlString, onSuccess: { image in
-                if let ownerTemp = cat.getOwner() {
-                    let textTemp = Text(ownerTemp)
-                    let randomCatCell = RandomCatCellView(imageCat: image,textOwner: textTemp)
-                    self.listViewCats.append(randomCatCell)
-                } else {
-                    let randomCatCell = RandomCatCellView(imageCat: image)
-                    self.listViewCats.append(randomCatCell)
-                }
-            })
+    func createRandomCatCell(idCatImage : String?,informationCat : String) async {
+        guard let idImage = idCatImage else {
+            return
         }
+        
+        do {
+            let imageCat = try await HttpRequest.shared.downloadImage(urlString: self.viewModel.getUrlCatImage(idImageCat: idImage))
+            let text = Text(informationCat)
+            
+            let randomCatCell : RandomCatCellView = RandomCatCellView(imageCat: imageCat,textInformation: text)
+            self.$listViewCats.wrappedValue.append(randomCatCell)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        
     }
 }
 
