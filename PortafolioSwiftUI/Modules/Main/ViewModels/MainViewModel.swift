@@ -12,9 +12,11 @@ class MainViewModel {
         MenuOptionModel(nameIcon: "catIcon",titleMenuOption: "Cat Randoms Image")
     ]
     
-    let nameAvatarHeader : String = "avatarMainMenu"
-    let informationHeader : String = "Hugo Alejandro Sebastián Villagra Bogarin"
+    let nameAvatarHeader : String = "LogoApp"
+    let informationHeader : String = "Portafolio SwiftUI"
     
     let titleListMenus : String = "Menu"
+    
+    let titleBottonDown : String = "Acerca de"
     
 }
