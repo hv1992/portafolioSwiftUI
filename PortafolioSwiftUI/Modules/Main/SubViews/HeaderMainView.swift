@@ -18,14 +18,14 @@ struct HeaderMainView: View {
         HStack(alignment: .top) {
             Image(self.viewModel.nameAvatar ?? "")
                 .resizable()
-                .frame(width: 100)
-                .cornerRadius(50)
+                .frame(width: 50,height: 50)
+                .cornerRadius(8)
                 .shadow(radius: 10)
             Text(self.viewModel.informationAvatar ?? "")
                 .bold()
                 .multilineTextAlignment(.center)
-                .padding(.all)
-        }.frame(height: 100)
+                .padding(.all).foregroundColor(Color.white)
+        }
         
     }
 }

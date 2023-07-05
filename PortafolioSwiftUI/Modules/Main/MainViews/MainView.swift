@@ -16,6 +16,7 @@ struct MainView: View {
     var viewModel : MainViewModel
     var optionsView : [OptionMainView] = []
     var headerView : HeaderMainView
+    @State var mostrarSubPantalla : Bool = false
     
     let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
     
@@ -43,7 +44,7 @@ struct MainView: View {
         NavigationView {
             VStack {
                 self.headerView
-                Text(self.viewModel.titleListMenus).font(.largeTitle).bold()
+                Text(self.viewModel.titleListMenus).font(.largeTitle).bold().underline().foregroundColor(Color.white)
                 ForEach(optionsView) { view in
                     //El NavigationLink es el que hace que nosotros podamos pasar a la siguiente pantalla.
                     NavigationLink(destination: RandomCatsView()) {
@@ -51,6 +52,18 @@ struct MainView: View {
                     }
                 }
                 Spacer() //Esto es para completar el espacio libre
+                Button(self.viewModel.titleBottonDown, action: {
+                    self.mostrarSubPantalla.toggle() //toogle lo que hace es conmutar de true a false, y viceversa
+                })
+                .foregroundColor(Color.white)
+                .sheet(isPresented: $mostrarSubPantalla) {
+                    VStack {
+                        Button("Cerrar") {
+                            self.mostrarSubPantalla.toggle()
+                        }
+                    }
+                }
+                .padding(.bottom)
             }.background(LinearGradient(colors: [.blue,self.skyBlue], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea(.all)) //Tengo que poner el ignoreSafeArea dentro del LinearGradient para que cubra todo el fondo sin que los elementos se vayan al safe area.
                 .onAppear {
                     print("cargo la vista VStack")
@@ -58,7 +71,6 @@ struct MainView: View {
                 .onDisappear {
                     print("desaparece la vista VStack")
                 }
-            
         //Esto es para controlar el ciclo de vida de cada view, que en este caso el view es el NavigationView (Cada vista tiene su ciclo de vida propio).
         }.onAppear {
             print("cargo la vista NavigationView")
