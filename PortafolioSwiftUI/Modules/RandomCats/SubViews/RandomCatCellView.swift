@@ -28,6 +28,7 @@ struct RandomCatCellView: View,Identifiable {
                 .cornerRadius(8)
                 .opacity(opacityValue) //Establecemos la opacidad
                 .animation(.easeInOut(duration: 0.5), value: opacityValue) //Lo que hace el animación es generar una transición de tiempo de llegar de un valor a otro, cuyo valor final se establece en el .onAppear. El value es el valor en la cual va a sufrir dicha transición
+                .shadow(radius: 10) //Esto es para agregar sombra
                 .onAppear {
                     opacityValue = 1.0
                 }

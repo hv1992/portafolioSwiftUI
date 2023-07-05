@@ -12,9 +12,11 @@ struct RandomCatsView: View {
     @ObservedObject var viewModel : RandomCatsViewModel = RandomCatsViewModel()
     @State var listViewCats : [RandomCatCellView] = [] //Cuando se pune @State, no es necesario agregar $ cuando se puede usar dicha variable, ya que al colocar @State, ya se considera de que el swiftUI está al tanto del cambio de valor del mismo.
     
-//    init() {
-//        ThemeNavigationBar.navigationBarColors(background: .clear,titleColor: .white, tintColor: .white)
-//    }
+    init() {
+        //Esto se hace porque no existe forma para IOS 14 configurar la barra de navegación, por lo que se tiene que usar todavia elementos de UIKit
+        //Esto es para configurar la barra de navegación
+        ThemeNavigationBar.navigationBarColors(titleColor: .white, tintColor: .white,backButtonColor: .white)
+    }
     
     var body: some View {
         NavigationView {
