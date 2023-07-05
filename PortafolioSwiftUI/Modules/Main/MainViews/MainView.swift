@@ -58,9 +58,7 @@ struct MainView: View {
                 .foregroundColor(Color.white)
                 .sheet(isPresented: $mostrarSubPantalla) {
                     VStack {
-                        Button("Cerrar") {
-                            self.mostrarSubPantalla.toggle()
-                        }
+                        InformationAppView()
                     }
                 }
                 .padding(.bottom)
