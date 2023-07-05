@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 import SwiftUI
 
+
+//Esto es de tipo actor, porque el mismo trabaja en segundo plano.
 actor HttpRequest : GlobalActor{
     static public let shared = HttpRequest()
     

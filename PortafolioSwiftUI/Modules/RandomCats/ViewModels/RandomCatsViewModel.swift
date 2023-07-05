@@ -10,10 +10,13 @@ import Alamofire
 
 class RandomCatsViewModel : ObservableObject {
     
+    
+    //Como estas variables trabajan con "actores secundarios", estos son actores principales, que estan pendientes de lo que hacen los actores secundarios, todo esto para agilizar las tareas asincronas.
     @MainActor @Published var listCatRandom : [CatModel] = []
     @MainActor @Published var errorMessageListCats = ""
     
     let titleNavigationBar : String = "Random Cats Image"
+    let titleProgressView : String = "Cargando michis"
     
     let urlBaseUrlImageCat : String = "https://cataas.com/cat/"
     let urlBaseGetCats : String = "https://cataas.com/api/cats"
@@ -43,7 +46,7 @@ class RandomCatsViewModel : ObservableObject {
         }
         
         if let listCats = await self.getCats() {
-            await MainActor.run {
+            await MainActor.run { //Esto es para ejecutar en el hilo principal, o "actuación principal"
                 self.listCatRandom = listCats
             }
         } else {
