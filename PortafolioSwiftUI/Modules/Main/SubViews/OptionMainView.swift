@@ -17,7 +17,7 @@ struct OptionMainView: View,Identifiable {
     
     var body: some View {
         HStack {
-            Image(self.viewModel.nameLogo ?? "")
+            Image(self.viewModel.nameLogo ?? "").resizable().frame(width: 50,height: 50)
             Text(self.viewModel.titleOption ?? "").foregroundColor(Color.white)
             Spacer()
         }.padding(.leading,16.0)
