@@ -30,6 +30,7 @@ struct MainView: View {
             var optionMain = OptionMainView()
             optionMain.viewModel.nameLogo = menu.nameIcon 
             optionMain.viewModel.titleOption = menu.titleMenuOption
+            optionMain.viewModel.codeOption = menu.codeOption
             self.optionsView.append(optionMain)
         }
         
@@ -39,7 +40,7 @@ struct MainView: View {
         self.headerView.viewModel.informationAvatar = self.viewModel.informationHeader
     }
     
-    //MARK : Hacer despues el acerca de con .sheet (modal)
+    //MARK: Hacer despues el acerca de con .sheet (modal)
     var body: some View {
         NavigationView {
             VStack {
@@ -47,8 +48,14 @@ struct MainView: View {
                 Text(self.viewModel.titleListMenus).font(.largeTitle).bold().underline().foregroundColor(Color.white)
                 ForEach(optionsView) { view in
                     //El NavigationLink es el que hace que nosotros podamos pasar a la siguiente pantalla.
-                    NavigationLink(destination: RandomCatsView()) {
-                        view
+                    if view.viewModel.codeOption == .catImage {
+                        NavigationLink(destination: RandomCatsView()) {
+                            view
+                        }
+                    } else if view.viewModel.codeOption == .dogImage {
+                        NavigationLink(destination: RandomDogView()) {
+                            view
+                        }
                     }
                 }
                 Spacer() //Esto es para completar el espacio libre
