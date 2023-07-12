@@ -13,6 +13,7 @@ struct RandomDogView: View {
     @State var raceMainDogSelected : String = ""
     @State var subRaceDogSelected : String = ""
     @State var imageDog : Image?
+    @State var progressLoadDogPowerOn : Bool = false
     
     
     init() {
@@ -77,7 +78,14 @@ struct RandomDogView: View {
                                 Spacer().frame(height:16)
                             }.background(Color.white)
                                 .cornerRadius(8)
-                            imageDog?.resizable().scaledToFit().padding(.all).cornerRadius(8)
+                            //MARK: Imagen del perro.
+                            if progressLoadDogPowerOn {
+                                Spacer().frame(height: 100)
+                                ProgressView(viewModel.titleProgressViewLoadDog).progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                                    .foregroundColor(Color.white)
+                            } else {
+                                imageDog?.resizable().scaledToFit().padding(.all).cornerRadius(8)
+                            }
                         } else {
                             //MARK: Ventana de espera de obtensión de la imagen del perro
                             ZStack {
@@ -101,9 +109,13 @@ struct RandomDogView: View {
     //MARK: La llamada para obtener la imagen del perro
     func getImageDog(raceDog : String,subRaceDog : String) async {
         do {
+            progressLoadDogPowerOn.toggle()
             let urlDogImage = await viewModel.getUrlImageDog(raceDog: raceDog,subRaceDog: subRaceDog)
             if let urlImage = urlDogImage {
                 self.imageDog = try await HttpRequest.shared.downloadImage(urlString: urlImage)
+                if self.imageDog != nil {
+                    progressLoadDogPowerOn.toggle()
+                }
             }
         } catch let error {
             print(error.localizedDescription)

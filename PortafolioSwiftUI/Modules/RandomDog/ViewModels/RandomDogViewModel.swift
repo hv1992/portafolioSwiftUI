@@ -18,6 +18,7 @@ class RandomDogViewModel : ObservableObject {
     let titlePickerSubRaceDog : String = "Sub raza de perro:"
     let titleProgressLoadRaceDogs : String = "Cargando razas de perro"
     let titleButtonLoadImageDog : String = "Obtener imagen"
+    let titleProgressViewLoadDog : String = "Cargando perrito"
     
     let urlRequestListRace : String = "https://dog.ceo/api/breeds/list/all"
     
