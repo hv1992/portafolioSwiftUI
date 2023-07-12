@@ -13,12 +13,13 @@ class RandomDogViewModel : ObservableObject {
     @Published var listMainRaceDog : [String] = []
     @Published var listSubRaceDog : [String] = []
     
-    var titleNavigationBar : String = "Random Dog Image"
-    var titlePickerRaceDog : String = "Raza principal de perro:"
-    var titlePickerSubRaceDog : String = "Sub raza de perro:"
-    var titleProgressLoadRaceDogs : String = "Cargando razas de perro"
+    let titleNavigationBar : String = "Random Dog Image"
+    let titlePickerRaceDog : String = "Raza principal de perro:"
+    let titlePickerSubRaceDog : String = "Sub raza de perro:"
+    let titleProgressLoadRaceDogs : String = "Cargando razas de perro"
+    let titleButtonLoadImageDog : String = "Obtener imagen"
     
-    var urlRequestListRace : String = "https://dog.ceo/api/breeds/list/all"
+    let urlRequestListRace : String = "https://dog.ceo/api/breeds/list/all"
     
     func getListRaceDogs() async -> DogRaceModel? {
         do {
@@ -59,5 +60,22 @@ class RandomDogViewModel : ObservableObject {
         var result = await self.dogRaceList[mainRace] ?? []
         result.sort()
         return result
+    }
+    
+    func getUrlImageDog(raceDog : String,subRaceDog : String) async -> String?{
+        do {
+            var partForGetImageDog : String = ""
+            if !raceDog.isEmpty && !subRaceDog.isEmpty {
+                partForGetImageDog = "\(raceDog)/\(subRaceDog)"
+            } else if !raceDog.isEmpty {
+                partForGetImageDog = raceDog
+            }
+            let urlRequestUrlImageDog = "https://dog.ceo/api/breed/\(partForGetImageDog)/images/random"
+            let dogImageModel : DogImageModel = try await HttpRequest.shared.requestCodable(urlString: urlRequestUrlImageDog, parameters: nil, headers: nil)
+            return dogImageModel.message
+        } catch let error {
+            print(error.localizedDescription)
+            return nil
+        }
     }
 }

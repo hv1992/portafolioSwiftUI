@@ -26,6 +26,7 @@
 		C59191AD2A44DB9E003B48F1 /* PortafolioSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59191AC2A44DB9E003B48F1 /* PortafolioSwiftUIUITestsLaunchTests.swift */; };
 		C59191BB2A44DCD4003B48F1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C59191BA2A44DCD4003B48F1 /* Alamofire */; };
 		C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59191C12A44E3EA003B48F1 /* OptionMainView.swift */; };
+		C59767A32A5F01140056A122 /* DogImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59767A22A5F01140056A122 /* DogImageModel.swift */; };
 		C5B3D77E2A55EA6A00B82CFB /* InformationAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D77D2A55EA6A00B82CFB /* InformationAppView.swift */; };
 		C5B3D7822A55EAB600B82CFB /* InformationAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7812A55EAB600B82CFB /* InformationAppViewModel.swift */; };
 		C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */; };
@@ -79,6 +80,7 @@
 		C59191AA2A44DB9E003B48F1 /* PortafolioSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortafolioSwiftUIUITests.swift; sourceTree = "<group>"; };
 		C59191AC2A44DB9E003B48F1 /* PortafolioSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortafolioSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C59191C12A44E3EA003B48F1 /* OptionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMainView.swift; sourceTree = "<group>"; };
+		C59767A22A5F01140056A122 /* DogImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageModel.swift; sourceTree = "<group>"; };
 		C5B3D77D2A55EA6A00B82CFB /* InformationAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAppView.swift; sourceTree = "<group>"; };
 		C5B3D7812A55EAB600B82CFB /* InformationAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAppViewModel.swift; sourceTree = "<group>"; };
 		C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				C5782DC12A5DA22600584D15 /* DogRaceModel.swift */,
+				C59767A22A5F01140056A122 /* DogImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */,
 				C5B3D7822A55EAB600B82CFB /* InformationAppViewModel.swift in Sources */,
 				C5E830822A461A9600397EAD /* HeaderMainViewModel.swift in Sources */,
+				C59767A32A5F01140056A122 /* DogImageModel.swift in Sources */,
 				C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */,
 				C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */,
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
