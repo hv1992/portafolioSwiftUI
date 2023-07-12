@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 import SwiftUI
 
+// MARK: Se le asigna alias a dictionario de json.
+typealias JSON = [String:Any]
 
 //Esto es de tipo actor, porque el mismo trabaja en segundo plano.
 actor HttpRequest : GlobalActor{

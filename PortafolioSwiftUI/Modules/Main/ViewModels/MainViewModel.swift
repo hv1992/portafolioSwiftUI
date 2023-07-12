@@ -9,7 +9,8 @@ import Foundation
 
 class MainViewModel {
     let listOptionsMenu : [MenuOptionModel] = [
-        MenuOptionModel(nameIcon: "catIcon",titleMenuOption: "Cat Randoms Image")
+        MenuOptionModel(nameIcon: "catIcon",titleMenuOption: "Cat Randoms Image",codeOption: .catImage),
+        MenuOptionModel(nameIcon: "dogIcon",titleMenuOption: "Random Dog Image",codeOption: .dogImage)
     ]
     
     let nameAvatarHeader : String = "LogoApp"

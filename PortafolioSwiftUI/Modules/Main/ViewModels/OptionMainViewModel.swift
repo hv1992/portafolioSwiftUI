@@ -10,4 +10,5 @@ import Foundation
 struct OptionMainViewModel {
     var titleOption : String?
     var nameLogo : String?
+    var codeOption : MenuOptionCode?
 }
