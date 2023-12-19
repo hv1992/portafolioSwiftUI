@@ -207,6 +207,45 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		C590417E2B31FA260041FC40 /* ContactBook */ = {
+			isa = PBXGroup;
+			children = (
+				C59041822B31FB920041FC40 /* SubViews */,
+				C59041812B31FAC80041FC40 /* Models */,
+				C59041802B31FABD0041FC40 /* ViewModels */,
+				C590417F2B31FAB40041FC40 /* MainViews */,
+			);
+			path = ContactBook;
+			sourceTree = "<group>";
+		};
+		C590417F2B31FAB40041FC40 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		C59041802B31FABD0041FC40 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C59041812B31FAC80041FC40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C59041822B31FB920041FC40 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		C59191832A44DB9D003B48F1 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +309,7 @@
 		C59191BC2A44DD3E003B48F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C590417E2B31FA260041FC40 /* ContactBook */,
 				C5C838972A58A95600270DCB /* RandomDog */,
 				C53649DD2A4CCF1C00E6F632 /* RandomCats */,
 				C59191BD2A44DD47003B48F1 /* Main */,
