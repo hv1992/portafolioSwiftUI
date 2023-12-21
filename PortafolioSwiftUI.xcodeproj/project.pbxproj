@@ -19,6 +19,9 @@
 		C58049B22A52462100DFB03D /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58049B12A52462100DFB03D /* HttpRequest.swift */; };
 		C59041862B31FE580041FC40 /* ContactContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59041842B31FE580041FC40 /* ContactContainer.xcdatamodeld */; };
 		C590418B2B3200330041FC40 /* ContactBookPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590418A2B3200330041FC40 /* ContactBookPersistenceController.swift */; };
+		C590418F2B323B580041FC40 /* ContactBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590418E2B323B580041FC40 /* ContactBookView.swift */; };
+		C59041942B323EC80041FC40 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59041932B323EC80041FC40 /* Colors.swift */; };
+		C59041962B3243570041FC40 /* ContactBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59041952B3243570041FC40 /* ContactBookViewModel.swift */; };
 		C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */; };
 		C59191922A44DB9D003B48F1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59191912A44DB9D003B48F1 /* MainView.swift */; };
 		C59191942A44DB9E003B48F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59191932A44DB9E003B48F1 /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		C58049B12A52462100DFB03D /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		C59041852B31FE580041FC40 /* ContactTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactTable.xcdatamodel; sourceTree = "<group>"; };
 		C590418A2B3200330041FC40 /* ContactBookPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookPersistenceController.swift; sourceTree = "<group>"; };
+		C590418E2B323B580041FC40 /* ContactBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookView.swift; sourceTree = "<group>"; };
+		C59041932B323EC80041FC40 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C59041952B3243570041FC40 /* ContactBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookViewModel.swift; sourceTree = "<group>"; };
 		C591918C2A44DB9D003B48F1 /* PortafolioSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortafolioSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591918F2A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortafolioSwiftUIApp.swift; sourceTree = "<group>"; };
 		C59191912A44DB9D003B48F1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 		C5380E992A53A2DB0000B0D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C59041902B323E840041FC40 /* SwiftUIElements */,
 				C59041832B31FE130041FC40 /* CoreDatas */,
 				C5B3D7862A56063200B82CFB /* NavigationBar */,
 				C5380E9A2A53A2E70000B0D0 /* Extensions */,
@@ -226,6 +233,7 @@
 		C590417F2B31FAB40041FC40 /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				C590418E2B323B580041FC40 /* ContactBookView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 		C59041802B31FABD0041FC40 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C59041952B3243570041FC40 /* ContactBookViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -282,6 +291,22 @@
 				C590418A2B3200330041FC40 /* ContactBookPersistenceController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C59041902B323E840041FC40 /* SwiftUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				C59041922B323EA50041FC40 /* Colors */,
+			);
+			path = SwiftUIElements;
+			sourceTree = "<group>";
+		};
+		C59041922B323EA50041FC40 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C59041932B323EC80041FC40 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		C59191832A44DB9D003B48F1 = {
@@ -604,6 +629,7 @@
 				C58049AB2A51E76100DFB03D /* AppDelegate.swift in Sources */,
 				C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */,
 				C53649E22A4CD19400E6F632 /* CatModel.swift in Sources */,
+				C59041962B3243570041FC40 /* ContactBookViewModel.swift in Sources */,
 				C5E8307D2A45F87C00397EAD /* MainViewModel.swift in Sources */,
 				C58049B02A5241E400DFB03D /* RandomCatCellViewModel.swift in Sources */,
 				C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */,
@@ -620,8 +646,10 @@
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
 				C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */,
 				C58049B22A52462100DFB03D /* HttpRequest.swift in Sources */,
+				C59041942B323EC80041FC40 /* Colors.swift in Sources */,
 				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C590418B2B3200330041FC40 /* ContactBookPersistenceController.swift in Sources */,
+				C590418F2B323B580041FC40 /* ContactBookView.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
 				C59041862B31FE580041FC40 /* ContactContainer.xcdatamodeld in Sources */,
