@@ -10,4 +10,5 @@ import Foundation
 enum MenuOptionCode {
     case catImage
     case dogImage
+    case contactList
 }
