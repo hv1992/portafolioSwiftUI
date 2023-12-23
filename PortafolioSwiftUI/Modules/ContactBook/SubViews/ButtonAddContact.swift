@@ -13,8 +13,6 @@ struct ButtonAddContact : View {
     
     @State var showScreenAddContact : Bool = false
     
-    var contacts : FetchedResults<Contact>
-    
     var body: some View {
         Button {
             self.showScreenAddContact.toggle()

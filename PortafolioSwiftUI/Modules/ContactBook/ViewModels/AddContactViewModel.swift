@@ -10,4 +10,5 @@ import Foundation
 class AddContactViewModel : ObservableObject {
     let titleScreenAddContact : String = "Agregar contacto"
     let titleButtonClose : String = "Cerrar"
+    
 }

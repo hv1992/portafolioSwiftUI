@@ -39,6 +39,9 @@
 		C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */; };
 		C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7872A56064E00B82CFB /* ThemeNavigationBar.swift */; };
 		C5B3D78A2A56134000B82CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B3D7892A56134000B82CFB /* LaunchScreen.storyboard */; };
+		C5C10A572B372D170055511C /* FormAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A562B372D170055511C /* FormAddContactView.swift */; };
+		C5C10A5A2B3739BC0055511C /* DefaultButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A592B3739BC0055511C /* DefaultButtonBlue.swift */; };
+		C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */; };
 		C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389C2A58A9A800270DCB /* RandomDogView.swift */; };
 		C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */; };
 		C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830792A45F74C00397EAD /* HeaderMainView.swift */; };
@@ -104,6 +107,9 @@
 		C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 		C5B3D7872A56064E00B82CFB /* ThemeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeNavigationBar.swift; sourceTree = "<group>"; };
 		C5B3D7892A56134000B82CFB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5C10A562B372D170055511C /* FormAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddContactView.swift; sourceTree = "<group>"; };
+		C5C10A592B3739BC0055511C /* DefaultButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonBlue.swift; sourceTree = "<group>"; };
+		C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonWhite.swift; sourceTree = "<group>"; };
 		C5C8389C2A58A9A800270DCB /* RandomDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogView.swift; sourceTree = "<group>"; };
 		C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogViewModel.swift; sourceTree = "<group>"; };
 		C5E830792A45F74C00397EAD /* HeaderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainView.swift; sourceTree = "<group>"; };
@@ -274,6 +280,7 @@
 				C5E9AD302B35E7E200C0190F /* ListContactView.swift */,
 				C5E9AD322B35E80B00C0190F /* ButtonAddContact.swift */,
 				C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */,
+				C5C10A562B372D170055511C /* FormAddContactView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -314,6 +321,7 @@
 		C59041902B323E840041FC40 /* SwiftUIElements */ = {
 			isa = PBXGroup;
 			children = (
+				C5C10A582B3739680055511C /* Buttons */,
 				C59041922B323EA50041FC40 /* Colors */,
 			);
 			path = SwiftUIElements;
@@ -434,6 +442,15 @@
 				C5B3D7872A56064E00B82CFB /* ThemeNavigationBar.swift */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		C5C10A582B3739680055511C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C5C10A592B3739BC0055511C /* DefaultButtonBlue.swift */,
+				C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		C5C838972A58A95600270DCB /* RandomDog */ = {
@@ -656,6 +673,7 @@
 				C58049AE2A5241CE00DFB03D /* RandomCatCellView.swift in Sources */,
 				C59191922A44DB9D003B48F1 /* MainView.swift in Sources */,
 				C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */,
+				C5C10A5A2B3739BC0055511C /* DefaultButtonBlue.swift in Sources */,
 				C5B3D7822A55EAB600B82CFB /* InformationAppViewModel.swift in Sources */,
 				C5E9AD352B35E8F900C0190F /* TitleAddContactView.swift in Sources */,
 				C5E9AD2F2B35E77500C0190F /* TitleContactListView.swift in Sources */,
@@ -673,8 +691,10 @@
 				C5E9AD332B35E80B00C0190F /* ButtonAddContact.swift in Sources */,
 				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C590418B2B3200330041FC40 /* ContactBookPersistenceController.swift in Sources */,
+				C5C10A572B372D170055511C /* FormAddContactView.swift in Sources */,
 				C590418F2B323B580041FC40 /* ContactBookView.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
+				C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
 				C59041862B31FE580041FC40 /* ContactContainer.xcdatamodeld in Sources */,
 				C5B3D77E2A55EA6A00B82CFB /* InformationAppView.swift in Sources */,

@@ -31,12 +31,13 @@ struct AddContactView: View {
                         }
                     }
                 }
+                FormAddContactView().background(Color.white)
+                    .cornerRadius(8).padding()
+                DefaultButtonBlue(titleButton: "Guardar contacto",actionButton: {
+                    back.wrappedValue.dismiss()
+                })
                 Spacer()
             }
         }
     }
-}
-
-#Preview {
-    AddContactView()
 }

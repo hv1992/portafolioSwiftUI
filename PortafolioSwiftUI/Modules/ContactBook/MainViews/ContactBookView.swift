@@ -22,7 +22,8 @@ struct ContactBookView: View {
                     TitleContactListView(viewModel: self.viewModel)
                     ListContactView(viewModel: self.viewModel, contacts: self.contacts)
                     Spacer()
-                    ButtonAddContact(viewModel: self.viewModel, contacts: self.contacts)
+                    ButtonAddContact(viewModel: self.viewModel)
+                    Spacer()
                 }
             }
         }
