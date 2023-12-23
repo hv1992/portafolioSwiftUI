@@ -33,7 +33,7 @@ struct AddContactView: View {
                 }
                 FormAddContactView().background(Color.white)
                     .cornerRadius(8).padding()
-                DefaultButtonBlue(titleButton: "Guardar contacto",actionButton: {
+                DefaultButtonBlue(titleButton: self.viewModel.titleButtonAddContact,actionButton: {
                     back.wrappedValue.dismiss()
                 })
                 Spacer()

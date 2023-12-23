@@ -28,24 +28,3 @@ struct FormAddContactView: View {
 #Preview {
     FormAddContactView()
 }
-
-struct FormCellAddContactView : View {
-    
-    var titleCell : String
-    @State var errorMessage : String = ""
-    @State var information : String
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Text(self.titleCell)
-                TextEditor(text: $information)
-            }.frame(height: 35)
-            if !errorMessage.isEmpty {
-                Text(self.errorMessage)
-            }
-        }
-        
-    }
-    
-}
