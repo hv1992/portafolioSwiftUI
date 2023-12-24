@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class FormCellAddContactViewModel : ObservableObject {
     var titleCell : String = ""
@@ -14,6 +15,6 @@ class FormCellAddContactViewModel : ObservableObject {
     @Published var errorMessage : String = ""
     @Published var information : String = ""
     
-    var onChangeText : ((String) -> ())? = nil
+    var onChangeText : ((String,Binding<String>) -> ())?
    
 }

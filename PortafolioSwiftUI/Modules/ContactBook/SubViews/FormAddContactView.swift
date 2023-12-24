@@ -13,12 +13,19 @@ struct FormAddContactView: View {
     
     var body: some View {
         VStack {
-            FormCellAddContactView(titleCell: self.viewModel.titleName, information: self.viewModel.nameContact)
-            FormCellAddContactView(titleCell: self.viewModel.titleLastName, information: self.viewModel.lastName)
-            FormCellAddContactView(titleCell: self.viewModel.titlePhone, information: self.viewModel.phone)
-            FormCellAddContactView(titleCell: self.viewModel.titleEmail, onChangeText: { emailText in
+            FormCellAddContactView(titleCell: self.viewModel.titleName,onChangeText: { (nameText,errorMessageBinding) in
+                print(nameText)
+                errorMessageBinding.wrappedValue = nameText
+            })
+            FormCellAddContactView(titleCell: self.viewModel.titleLastName,onChangeText: { (lastNameText,errorMessageBinding) in
                 
-            }, information: self.viewModel.email)
+            })
+            FormCellAddContactView(titleCell: self.viewModel.titlePhone, onChangeText: { (titlePhoneText,errorMessageBinding) in
+                
+            })
+            FormCellAddContactView(titleCell: self.viewModel.titleEmail, onChangeText: { (emailText,errorMessageBinding) in
+                
+            })
         }.padding()
     }
 }

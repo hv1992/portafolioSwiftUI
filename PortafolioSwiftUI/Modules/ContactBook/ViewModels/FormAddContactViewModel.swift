@@ -17,4 +17,7 @@ class FormAddContactViewModel : ObservableObject {
     @Published var lastName : String = ""
     @Published var phone: String = ""
     @Published var email: String = ""
+    
+    
+    
 }
