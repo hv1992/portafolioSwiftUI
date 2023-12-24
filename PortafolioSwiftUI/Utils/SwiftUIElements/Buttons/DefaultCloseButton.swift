@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct DefaultCloseButton: View {
+    
+    var titleButtonClose : String
+    var onPressedButton : (() -> ())?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action : {
+            onPressedButton?()
+        }) {
+            Label(self.titleButtonClose, systemImage: "xmark.circle.fill").foregroundColor(.white)
+        }
     }
-}
-
-#Preview {
-    DefaultCloseButton()
 }

@@ -23,13 +23,9 @@ struct AddContactView: View {
                         .padding()
                     Spacer()
                         .frame(width: 20)
-                    HStack {
-                        Button(action : {
-                            back.wrappedValue.dismiss()
-                        }) {
-                            Label(self.viewModel.titleButtonClose, systemImage: "xmark.circle.fill").foregroundColor(.white)
-                        }
-                    }
+                    DefaultCloseButton(titleButtonClose: self.viewModel.titleButtonClose, onPressedButton: {
+                        back.wrappedValue.dismiss()
+                    })
                 }
                 FormAddContactView().background(Color.white)
                     .cornerRadius(8).padding()
