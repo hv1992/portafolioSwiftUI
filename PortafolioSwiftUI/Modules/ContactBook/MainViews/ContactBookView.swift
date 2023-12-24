@@ -21,7 +21,7 @@ struct ContactBookView: View {
                 VStack {
                     ListContactView(viewModel: self.viewModel, contacts: self.contacts)
                     Spacer()
-                    ButtonAddContact(viewModel: self.viewModel)
+                    ButtonAddContactView(viewModel: self.viewModel)
                     Spacer()
                 }
             }

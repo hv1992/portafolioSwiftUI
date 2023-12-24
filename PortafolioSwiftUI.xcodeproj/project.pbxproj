@@ -34,6 +34,11 @@
 		C59191BB2A44DCD4003B48F1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C59191BA2A44DCD4003B48F1 /* Alamofire */; };
 		C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59191C12A44E3EA003B48F1 /* OptionMainView.swift */; };
 		C59767A32A5F01140056A122 /* DogImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59767A22A5F01140056A122 /* DogImageModel.swift */; };
+		C5A537D12B37A23000FE7702 /* FormCellAddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A537D02B37A23000FE7702 /* FormCellAddContactViewModel.swift */; };
+		C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A537D22B37A7FC00FE7702 /* FormAddContactViewModel.swift */; };
+		C5A537D52B37B1A300FE7702 /* ButtonAddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A537D42B37B1A300FE7702 /* ButtonAddContactViewModel.swift */; };
+		C5A537D72B37B26300FE7702 /* ListContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A537D62B37B26300FE7702 /* ListContactViewModel.swift */; };
+		C5A537D92B37B2CD00FE7702 /* TitleAddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A537D82B37B2CD00FE7702 /* TitleAddContactViewModel.swift */; };
 		C5B3D77E2A55EA6A00B82CFB /* InformationAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D77D2A55EA6A00B82CFB /* InformationAppView.swift */; };
 		C5B3D7822A55EAB600B82CFB /* InformationAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7812A55EAB600B82CFB /* InformationAppViewModel.swift */; };
 		C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */; };
@@ -53,7 +58,7 @@
 		C5E830822A461A9600397EAD /* HeaderMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830812A461A9600397EAD /* HeaderMainViewModel.swift */; };
 		C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830832A462DAC00397EAD /* OptionMainViewModel.swift */; };
 		C5E9AD312B35E7E200C0190F /* ListContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD302B35E7E200C0190F /* ListContactView.swift */; };
-		C5E9AD332B35E80B00C0190F /* ButtonAddContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD322B35E80B00C0190F /* ButtonAddContact.swift */; };
+		C5E9AD332B35E80B00C0190F /* ButtonAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD322B35E80B00C0190F /* ButtonAddContactView.swift */; };
 		C5E9AD352B35E8F900C0190F /* TitleAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +109,11 @@
 		C59191AC2A44DB9E003B48F1 /* PortafolioSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortafolioSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C59191C12A44E3EA003B48F1 /* OptionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMainView.swift; sourceTree = "<group>"; };
 		C59767A22A5F01140056A122 /* DogImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageModel.swift; sourceTree = "<group>"; };
+		C5A537D02B37A23000FE7702 /* FormCellAddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCellAddContactViewModel.swift; sourceTree = "<group>"; };
+		C5A537D22B37A7FC00FE7702 /* FormAddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddContactViewModel.swift; sourceTree = "<group>"; };
+		C5A537D42B37B1A300FE7702 /* ButtonAddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAddContactViewModel.swift; sourceTree = "<group>"; };
+		C5A537D62B37B26300FE7702 /* ListContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactViewModel.swift; sourceTree = "<group>"; };
+		C5A537D82B37B2CD00FE7702 /* TitleAddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAddContactViewModel.swift; sourceTree = "<group>"; };
 		C5B3D77D2A55EA6A00B82CFB /* InformationAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAppView.swift; sourceTree = "<group>"; };
 		C5B3D7812A55EAB600B82CFB /* InformationAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAppViewModel.swift; sourceTree = "<group>"; };
 		C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
@@ -123,7 +133,7 @@
 		C5E830812A461A9600397EAD /* HeaderMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainViewModel.swift; sourceTree = "<group>"; };
 		C5E830832A462DAC00397EAD /* OptionMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMainViewModel.swift; sourceTree = "<group>"; };
 		C5E9AD302B35E7E200C0190F /* ListContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactView.swift; sourceTree = "<group>"; };
-		C5E9AD322B35E80B00C0190F /* ButtonAddContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAddContact.swift; sourceTree = "<group>"; };
+		C5E9AD322B35E80B00C0190F /* ButtonAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAddContactView.swift; sourceTree = "<group>"; };
 		C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAddContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +277,11 @@
 			children = (
 				C59041952B3243570041FC40 /* ContactBookViewModel.swift */,
 				C52E2DB52B3469CD00FBDD44 /* AddContactViewModel.swift */,
+				C5A537D02B37A23000FE7702 /* FormCellAddContactViewModel.swift */,
+				C5A537D22B37A7FC00FE7702 /* FormAddContactViewModel.swift */,
+				C5A537D42B37B1A300FE7702 /* ButtonAddContactViewModel.swift */,
+				C5A537D62B37B26300FE7702 /* ListContactViewModel.swift */,
+				C5A537D82B37B2CD00FE7702 /* TitleAddContactViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -282,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E9AD302B35E7E200C0190F /* ListContactView.swift */,
-				C5E9AD322B35E80B00C0190F /* ButtonAddContact.swift */,
+				C5E9AD322B35E80B00C0190F /* ButtonAddContactView.swift */,
 				C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */,
 				C5C10A562B372D170055511C /* FormAddContactView.swift */,
 				C5C10A5D2B3743DC0055511C /* FormCellAddContactView.swift */,
@@ -697,23 +712,28 @@
 				C59767A32A5F01140056A122 /* DogImageModel.swift in Sources */,
 				C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */,
 				C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */,
+				C5A537D72B37B26300FE7702 /* ListContactViewModel.swift in Sources */,
 				C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */,
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
 				C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */,
 				C52E2DB62B3469CD00FBDD44 /* AddContactViewModel.swift in Sources */,
 				C58049B22A52462100DFB03D /* HttpRequest.swift in Sources */,
 				C59041942B323EC80041FC40 /* Colors.swift in Sources */,
-				C5E9AD332B35E80B00C0190F /* ButtonAddContact.swift in Sources */,
+				C5E9AD332B35E80B00C0190F /* ButtonAddContactView.swift in Sources */,
 				C5C10A632B374E590055511C /* TypeContactEnum.swift in Sources */,
 				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C590418B2B3200330041FC40 /* ContactBookPersistenceController.swift in Sources */,
 				C5C10A572B372D170055511C /* FormAddContactView.swift in Sources */,
 				C590418F2B323B580041FC40 /* ContactBookView.swift in Sources */,
+				C5A537D52B37B1A300FE7702 /* ButtonAddContactViewModel.swift in Sources */,
+				C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */,
+				C5A537D12B37A23000FE7702 /* FormCellAddContactViewModel.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
 				C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
 				C59041862B31FE580041FC40 /* ContactContainer.xcdatamodeld in Sources */,
 				C5B3D77E2A55EA6A00B82CFB /* InformationAppView.swift in Sources */,
+				C5A537D92B37B2CD00FE7702 /* TitleAddContactViewModel.swift in Sources */,
 				C5380E9D2A53A30D0000B0D0 /* ImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

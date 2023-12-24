@@ -9,18 +9,16 @@ import SwiftUI
 
 struct FormAddContactView: View {
     
-    @State var nameContact : String = ""
-    @State var lastName : String = ""
-    @State var phone: String = ""
-    @State var email: String = ""
-
+    @ObservedObject private var viewModel : FormAddContactViewModel = FormAddContactViewModel()
     
     var body: some View {
         VStack {
-            FormCellAddContactView(titleCell: "Nombre: ", information: nameContact)
-            FormCellAddContactView(titleCell: "Apellido: ", information: nameContact)
-            FormCellAddContactView(titleCell: "Telefono: ", information: nameContact)
-            FormCellAddContactView(titleCell: "Email: ", information: email)
+            FormCellAddContactView(titleCell: self.viewModel.titleName, information: self.viewModel.nameContact)
+            FormCellAddContactView(titleCell: self.viewModel.titleLastName, information: self.viewModel.lastName)
+            FormCellAddContactView(titleCell: self.viewModel.titlePhone, information: self.viewModel.phone)
+            FormCellAddContactView(titleCell: self.viewModel.titleEmail, onChangeText: { emailText in
+                
+            }, information: self.viewModel.email)
         }.padding()
     }
 }

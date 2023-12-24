@@ -10,24 +10,34 @@ import SwiftUI
 
 struct FormCellAddContactView : View {
     
-    var titleCell : String
+    @ObservedObject private var viewModel : FormCellAddContactViewModel
     
-    @State private var errorMessage : String = ""
-    var playgroundText : String = ""
+    var information : Binding<String> {
+        return Binding<String>(get: {self.viewModel.information}, set: {
+            self.viewModel.information = $0 })
+    }
     
-    @State var information : String
+    init(titleCell: String = "", errorMessage: String = "", playgroundText: String = "", onChangeText: ( (String) -> Void)? = nil, information: String = "") {
+        let viewModelTemp = FormCellAddContactViewModel()
+        viewModelTemp.titleCell = titleCell
+        viewModelTemp.errorMessage = errorMessage
+        viewModelTemp.playgroundText = playgroundText
+        viewModelTemp.onChangeText = onChangeText
+        viewModelTemp.information = information
+        self.viewModel = viewModelTemp
+    }
     
     var body: some View {
         VStack {
             HStack {
-                Text(self.titleCell)
-                TextField(playgroundText,text: $information)
-                    .onChange(of: information) { newInformation in
-                        
+                Text(self.viewModel.titleCell)
+                TextField(self.viewModel.playgroundText,text: self.information)
+                    .onChange(of: self.viewModel.information) { newInformation in
+                        self.viewModel.onChangeText?(newInformation)
                     }
             }.frame(height: 35)
-            if !errorMessage.isEmpty {
-                Text(self.errorMessage)
+            if !self.viewModel.errorMessage.isEmpty {
+                Text(self.self.viewModel.errorMessage)
             }
         }
         

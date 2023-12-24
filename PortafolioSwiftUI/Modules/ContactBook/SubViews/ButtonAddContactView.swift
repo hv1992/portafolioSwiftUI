@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ButtonAddContact : View {
+struct ButtonAddContactView : View {
     @ObservedObject var viewModel : ContactBookViewModel
     
     @State var showScreenAddContact : Bool = false
