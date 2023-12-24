@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ButtonAddContactView : View {
-    @ObservedObject var viewModel : ContactBookViewModel
+    let viewModel : ButtonAddContactViewModel = ButtonAddContactViewModel()
     
     @State var showScreenAddContact : Bool = false
     

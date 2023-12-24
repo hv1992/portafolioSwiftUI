@@ -10,6 +10,4 @@ import Foundation
 class ContactBookViewModel : ObservableObject {
     let titleNavigationBar = "Lista contactos"
     let titleButtonAddContact = "Agregar contacto"
-    let messageNotExistContact = "No existen contactos"
-    
 }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ListContactView : View {
-    @ObservedObject var viewModel : ContactBookViewModel
+    let viewModel : ListContactViewModel = ListContactViewModel()
     
     var contacts : FetchedResults<Contact>
     

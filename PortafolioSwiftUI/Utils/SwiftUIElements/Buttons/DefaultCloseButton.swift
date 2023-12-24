@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DefaultCloseButton: View {
     
-    var titleButtonClose : String
+    var titleButtonClose : String = "Cerrar"
     var onPressedButton : (() -> ())?
     
     var body: some View {

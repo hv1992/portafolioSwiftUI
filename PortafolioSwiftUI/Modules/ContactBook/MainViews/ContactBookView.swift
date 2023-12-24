@@ -19,9 +19,9 @@ struct ContactBookView: View {
             ZStack {
                 Colors.defaultBackgroundColor
                 VStack {
-                    ListContactView(viewModel: self.viewModel, contacts: self.contacts)
+                    ListContactView(contacts: contacts)
                     Spacer()
-                    ButtonAddContactView(viewModel: self.viewModel)
+                    ButtonAddContactView()
                     Spacer()
                 }
             }

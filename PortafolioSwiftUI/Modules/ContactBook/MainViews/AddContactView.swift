@@ -19,11 +19,11 @@ struct AddContactView: View {
             Colors.defaultBackgroundColor
             VStack {
                 HStack {
-                    TitleAddContactView(viewModel: self.viewModel)
+                    TitleAddContactView()
                         .padding()
                     Spacer()
                         .frame(width: 20)
-                    DefaultCloseButton(titleButtonClose: self.viewModel.titleButtonClose, onPressedButton: {
+                    DefaultCloseButton(onPressedButton: {
                         back.wrappedValue.dismiss()
                     })
                 }

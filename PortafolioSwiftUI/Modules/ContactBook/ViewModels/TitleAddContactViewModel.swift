@@ -8,5 +8,5 @@
 import Foundation
 
 class TitleAddContactViewModel {
-    
+    let titleScreenAddContact : String = "Agregar contacto"
 }

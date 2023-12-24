@@ -8,5 +8,5 @@
 import Foundation
 
 class ListContactViewModel {
-    
+    let messageNotExistContact = "No existen contactos"
 }

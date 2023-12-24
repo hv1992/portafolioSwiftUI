@@ -8,5 +8,5 @@
 import Foundation
 
 class ButtonAddContactViewModel : ObservableObject {
-    
+    let titleButtonAddContact = "Agregar contacto"
 }

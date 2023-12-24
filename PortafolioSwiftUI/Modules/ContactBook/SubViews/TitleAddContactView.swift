@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitleAddContactView: View {
     
-    @ObservedObject var viewModel : AddContactViewModel
+    private var viewModel : TitleAddContactViewModel = TitleAddContactViewModel()
     
     var body: some View {
         Text(self.viewModel.titleScreenAddContact)
