@@ -15,6 +15,6 @@ class FormCellAddContactViewModel : ObservableObject {
     @Published var errorMessage : String = ""
     @Published var information : String = ""
     
-    var onChangeText : ((String,Binding<String>) -> ())?
+    var onChangeText : ((Binding<String>,Binding<String>) -> ())?
    
 }

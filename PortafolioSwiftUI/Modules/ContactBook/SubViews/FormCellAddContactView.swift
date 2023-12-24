@@ -22,7 +22,7 @@ struct FormCellAddContactView : View {
             self.viewModel.errorMessage = $0 })
     }
     
-    init(titleCell: String = "", errorMessage: String = "", playgroundText: String = "", onChangeText: ( (String,Binding<String>) -> Void)?) {
+    init(titleCell: String = "", errorMessage: String = "", playgroundText: String = "", onChangeText: ( (Binding<String>,Binding<String>) -> Void)?) {
         let viewModelTemp = FormCellAddContactViewModel()
         viewModelTemp.titleCell = titleCell
         viewModelTemp.errorMessage = errorMessage
@@ -37,7 +37,7 @@ struct FormCellAddContactView : View {
                 Text(self.viewModel.titleCell)
                 TextField(self.viewModel.playgroundText,text: self.information)
                     .onChange(of: self.viewModel.information) { newInformation in
-                        self.viewModel.onChangeText?(newInformation,errorMessage)
+                        self.viewModel.onChangeText?(information,errorMessage)
                     }
             }.frame(height: 20)
             if !self.viewModel.errorMessage.isEmpty {
