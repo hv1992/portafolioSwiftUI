@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddContactView: View {
     
-    @ObservedObject private var viewModel = AddContactViewModel()
+    private var viewModel = AddContactViewModel()
     
     //El @Envoronment sirve para obtener un valor de esta vista, que en este caso, el valor a obtener el modo de presentación
     @Environment(\.presentationMode) var back
@@ -27,7 +27,22 @@ struct AddContactView: View {
                         back.wrappedValue.dismiss()
                     })
                 }
-                FormAddContactView().background(Color.white)
+                FormAddContactView(onChangeNameText: { (informationText,errorText) in
+                    
+                },onChangeLastNameText: { (informationText,errorText) in
+                    
+                },onChangePhoneText: { (informationText,errorText) in
+                    
+                },onChangeEmailText: { (informationText,errorText) in
+                    if self.viewModel.verifyIfEmail(emailText: informationText.wrappedValue) {
+                        errorText.wrappedValue = ""
+                        self.viewModel.existErrorEmail = false
+                        self.viewModel.email = informationText.wrappedValue
+                    } else {
+                        self.viewModel.existErrorEmail = true
+                        errorText.wrappedValue = self.viewModel.messageEmailError
+                    }
+                }).background(Color.white)
                     .cornerRadius(8).padding()
                 DefaultButtonBlue(titleButton: self.viewModel.titleButtonAddContact,actionButton: {
                     back.wrappedValue.dismiss()
