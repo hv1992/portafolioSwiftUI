@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ContactBookViewModel : ObservableObject {
+class ContactBookViewModel {
     let titleNavigationBar = "Lista contactos"
     let titleButtonAddContact = "Agregar contacto"
 }

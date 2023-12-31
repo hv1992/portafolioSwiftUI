@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ButtonAddContactViewModel : ObservableObject {
+class ButtonAddContactViewModel {
     let titleButtonAddContact = "Agregar contacto"
 }

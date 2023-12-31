@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactBookView: View {
-    @ObservedObject private var viewModel = ContactBookViewModel()
+    private var viewModel = ContactBookViewModel()
     
     //Para obtener el listado de contactos desde el Core Data
     @FetchRequest(entity: Contact.entity(), sortDescriptors: []) var contacts : FetchedResults<Contact>
