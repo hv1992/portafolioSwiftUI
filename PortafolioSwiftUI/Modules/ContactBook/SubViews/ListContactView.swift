@@ -21,12 +21,13 @@ struct ListContactView : View {
                         Text(contact.name ?? "")
                         Text(contact.lastName ?? "")
                     }
+                    Spacer()
                     VStack {
                         Text(contact.phone ?? "")
                         Text(contact.email ?? "")
                     }
                 }
-            }
+            }.listStyle(.plain)
         } else {
             VStack {
                 Spacer()

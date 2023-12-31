@@ -28,10 +28,13 @@ struct AddContactView: View {
                     })
                 }
                 FormAddContactView(onChangeNameText: { (informationText,errorText) in
+                    self.viewModel.name = informationText.wrappedValue
                     
                 },onChangeLastNameText: { (informationText,errorText) in
+                    self.viewModel.lastName = informationText.wrappedValue
                     
                 },onChangePhoneText: { (informationText,errorText) in
+                    self.viewModel.phone = informationText.wrappedValue
                     
                 },onChangeEmailText: { (informationText,errorText) in
                     if self.viewModel.verifyIfEmail(emailText: informationText.wrappedValue) {
@@ -45,6 +48,7 @@ struct AddContactView: View {
                 }).background(Color.white)
                     .cornerRadius(8).padding()
                 DefaultButtonBlue(titleButton: self.viewModel.titleButtonAddContact,actionButton: {
+                    self.viewModel.saveContact()
                     back.wrappedValue.dismiss()
                 })
                 Spacer()

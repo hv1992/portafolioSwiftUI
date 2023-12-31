@@ -32,10 +32,24 @@ class AddContactViewModel {
     }
     
     func verifyPhoneNumber(phoneNumber : String) -> Bool {
-        return true
+        let phoneRegex = #"^\d{6,10}$"#
+        let isValidPhone = NSPredicate(format: "SELF MATCHES %@", phoneRegex).evaluate(with: phoneNumber)
+        return isValidPhone
     }
     
     func verifyNameOrLastName(nameOrLastName : String) -> Bool {
-        return true
+        let nameOrLastNameRegex = #"^[a-zA-Z ]+$"#
+        let isValidPhone = NSPredicate(format: "SELF MATCHES %@", nameOrLastNameRegex).evaluate(with: nameOrLastName)
+        return isValidPhone
+    }
+    
+    func saveContact() {
+        let controller = ContactBookPersistenceController.shared
+        let contact = Contact(context: controller.container.viewContext)
+        contact.name = self.name
+        contact.lastName = self.lastName
+        contact.phone = self.phone
+        contact.email = self.email
+        controller.save()
     }
 }
