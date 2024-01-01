@@ -10,15 +10,18 @@ import Foundation
 class AddContactViewModel {
     let titleButtonAddContact : String = "Guardar contacto"
     
-    let messageEmailError : String = "Formato Email incorrecto"
-    let messageNameError : String = ""
-    let messagePhoneError : String = ""
-    let messageLastNameError : String = ""
+    let messageEmailError : String = "Formato email incorrecto"
+    let messageNameError : String = "Formato nombre incorrecto"
+    let messagePhoneError : String = "Formato telefono incorrecto"
+    let messageLastNameError : String = "Formato apellido incorrecto"
     
-    var existErrorName : Bool = false
-    var existErrorLastName : Bool = false
-    var existErrorPhone : Bool = false
-    var existErrorEmail : Bool = false
+    let titleMessageAlert : String = "Error guardar contacto"
+    let messageAlert : String = "Uno o mas información de contacto, estan incompleto o no tiene el formato correcto"
+    
+    var existErrorName : Bool = true
+    var existErrorLastName : Bool = true
+    var existErrorPhone : Bool = true
+    var existErrorEmail : Bool = true
     
     var name : String = ""
     var lastName : String = ""
@@ -39,8 +42,14 @@ class AddContactViewModel {
     
     func verifyNameOrLastName(nameOrLastName : String) -> Bool {
         let nameOrLastNameRegex = #"^[a-zA-Z ]+$"#
-        let isValidPhone = NSPredicate(format: "SELF MATCHES %@", nameOrLastNameRegex).evaluate(with: nameOrLastName)
-        return isValidPhone
+        let isValidLastName = NSPredicate(format: "SELF MATCHES %@", nameOrLastNameRegex).evaluate(with: nameOrLastName)
+        return isValidLastName
+    }
+    
+    func validateInformation() -> Bool {
+        let existErrorFormat = self.existErrorEmail || self.existErrorName || self.existErrorPhone || self.existErrorLastName
+        let existEmplyInformations = self.email.isEmpty && self.name.isEmpty && self.lastName.isEmpty && self.phone.isEmpty
+        return !existErrorFormat && !existEmplyInformations
     }
     
     func saveContact() {
