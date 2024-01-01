@@ -32,40 +32,40 @@ struct AddContactView: View {
                 FormAddContactView(onChangeNameText: { (informationText,errorText) in
                     let isValid = self.viewModel.verifyNameOrLastName(nameOrLastName: informationText.wrappedValue)
                     self.viewModel.existErrorName = !isValid
+                    self.viewModel.name = informationText.wrappedValue
                     if isValid {
                         errorText.wrappedValue = ""
-                        self.viewModel.name = informationText.wrappedValue
                     } else {
                         errorText.wrappedValue = self.viewModel.messageNameError
                     }
-                },onChangeLastNameText: { (informationText,errorText) in
+                }, onChangeLastNameText: { (informationText,errorText) in
                     let isValid = self.viewModel.verifyNameOrLastName(nameOrLastName: informationText.wrappedValue)
                     self.viewModel.existErrorLastName = !isValid
+                    self.viewModel.lastName = informationText.wrappedValue
                     if isValid {
                         errorText.wrappedValue = ""
-                        self.viewModel.lastName = informationText.wrappedValue
                     } else {
                         errorText.wrappedValue = self.viewModel.messageLastNameError
                     }
-                },onChangePhoneText: { (informationText,errorText) in
+                }, onChangePhoneText: { (informationText,errorText) in
                     let isValid = self.viewModel.verifyPhoneNumber(phoneNumber: informationText.wrappedValue)
                     self.viewModel.existErrorPhone = !isValid
+                    self.viewModel.phone = informationText.wrappedValue
                     if isValid {
                         errorText.wrappedValue = ""
-                        self.viewModel.phone = informationText.wrappedValue
                     } else {
                         errorText.wrappedValue = self.viewModel.messagePhoneError
                     }
-                },onChangeEmailText: { (informationText,errorText) in
+                }, onChangeEmailText: { (informationText,errorText) in
                     let isValid = self.viewModel.verifyIfEmail(emailText: informationText.wrappedValue)
                     self.viewModel.existErrorEmail = !isValid
+                    self.viewModel.email = informationText.wrappedValue
                     if isValid {
                         errorText.wrappedValue = ""
-                        self.viewModel.email = informationText.wrappedValue
                     } else {
                         errorText.wrappedValue = self.viewModel.messageEmailError
                     }
-                }).background(Color.white)
+                }, name: self.viewModel.name,lastName: self.viewModel.lastName,phone: self.viewModel.phone,email: self.viewModel.email,errorName:self.viewModel.messageNameError,errorLastName:self.viewModel.messageLastNameError,errorPhone:self.viewModel.messagePhoneError,errorEmail:self.viewModel.messageEmailError).background(Color.white)
                     .cornerRadius(8).padding()
                 Button(action: {
                     if self.viewModel.validateInformation() {

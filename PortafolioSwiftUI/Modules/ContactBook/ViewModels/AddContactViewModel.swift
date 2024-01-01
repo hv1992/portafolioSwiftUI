@@ -10,18 +10,43 @@ import Foundation
 class AddContactViewModel {
     let titleButtonAddContact : String = "Guardar contacto"
     
-    let messageEmailError : String = "Formato email incorrecto"
-    let messageNameError : String = "Formato nombre incorrecto"
-    let messagePhoneError : String = "Formato telefono incorrecto"
-    let messageLastNameError : String = "Formato apellido incorrecto"
+    var existErrorName : Bool = false
+    var existErrorLastName : Bool = false
+    var existErrorPhone : Bool = false
+    var existErrorEmail : Bool = false
+    
+    var messageEmailError : String {
+        if existErrorEmail {
+            return "Formato email incorrecto"
+        } else {
+            return ""
+        }
+    }
+    var messageNameError : String {
+        if existErrorName {
+            return "Formato nombre incorrecto"
+        } else {
+            return ""
+        }
+        
+    }
+    var messagePhoneError : String {
+        if existErrorPhone {
+            return "Formato telefono incorrecto"
+        } else {
+            return ""
+        }
+    }
+    var messageLastNameError : String {
+        if existErrorLastName {
+            return "Formato apellido incorrecto"
+        } else {
+            return ""
+        }
+    }
     
     let titleMessageAlert : String = "Error guardar contacto"
     let messageAlert : String = "Uno o mas información de contacto, estan incompleto o no tiene el formato correcto"
-    
-    var existErrorName : Bool = true
-    var existErrorLastName : Bool = true
-    var existErrorPhone : Bool = true
-    var existErrorEmail : Bool = true
     
     var name : String = ""
     var lastName : String = ""

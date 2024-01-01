@@ -12,4 +12,14 @@ class FormAddContactViewModel : ObservableObject {
     let titleLastName : String = "Apellido: "
     let titlePhone : String = "Telefono: "
     let titleEmail : String = "Email: "
+    
+    var name : String = ""
+    var lastName : String = ""
+    var phone : String = ""
+    var email : String = ""
+    
+    var emailError : String = ""
+    var nameError : String = ""
+    var phoneError : String = ""
+    var lastNameError : String = ""
 }
