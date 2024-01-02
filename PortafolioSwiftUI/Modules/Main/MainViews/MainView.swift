@@ -56,6 +56,10 @@ struct MainView: View {
                         NavigationLink(destination: RandomDogView()) {
                             view
                         }
+                    } else if view.viewModel.codeOption == .contactList {
+                        NavigationLink(destination: ContactBookView()) {
+                            view
+                        }
                     }
                 }
                 Spacer() //Esto es para completar el espacio libre
