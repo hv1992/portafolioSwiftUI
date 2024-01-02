@@ -84,4 +84,18 @@ struct ContactBookPersistenceController {
             }
         }
     }
+    
+    func deleteData(item : Contact) {
+        let context = container.viewContext
+        
+        context.delete(item)
+        //try! context.save()
+        do {
+            try context.save()
+            print("Elimino")
+        } catch let error as NSError {
+            // alerta al usario
+            print("No elimino", error.localizedDescription)
+        }
+    }
 }

@@ -13,21 +13,41 @@ struct ListContactView : View {
     
     var contacts : FetchedResults<Contact>
     
+    @State private var showAlert : Bool = false
+    
     var body: some View {
         if !self.contacts.isEmpty {
             List(self.contacts) { contact in
                 HStack {
                     VStack {
-                        Text(contact.name ?? "")
-                        Text(contact.lastName ?? "")
+                        Text(contact.name ?? "").onLongPressGesture {
+                            self.showAlert.toggle()
+                        }
+                        Text(contact.lastName ?? "").onLongPressGesture {
+                            self.showAlert.toggle()
+                        }
                     }
                     Spacer()
                     VStack {
-                        Text(contact.phone ?? "")
-                        Text(contact.email ?? "")
+                        Text(contact.phone ?? "").onLongPressGesture {
+                            self.showAlert.toggle()
+                        }
+                        Text(contact.email ?? "").onLongPressGesture {
+                            self.showAlert.toggle()
+                        }
                     }
+                }.alert(isPresented: self.$showAlert) {
+                    Alert(
+                        title: Text(self.viewModel.titleMessageAlert),
+                        message: Text(self.viewModel.messageAlert),
+                        primaryButton: .default(Text("Si"), action: {
+                            ContactBookPersistenceController.shared.deleteData(item: contact)
+                        }),
+                        secondaryButton: .destructive(Text("No"))
+                    )
                 }
-            }.listStyle(.plain)
+            }
+            .listStyle(.plain)
         } else {
             VStack {
                 Spacer()
