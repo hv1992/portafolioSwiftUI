@@ -49,7 +49,6 @@
 		C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */; };
 		C5C10A5E2B3743DC0055511C /* FormCellAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5D2B3743DC0055511C /* FormCellAddContactView.swift */; };
 		C5C10A602B37450C0055511C /* DefaultCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5F2B37450C0055511C /* DefaultCloseButton.swift */; };
-		C5C10A632B374E590055511C /* TypeContactEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A622B374E590055511C /* TypeContactEnum.swift */; };
 		C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389C2A58A9A800270DCB /* RandomDogView.swift */; };
 		C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */; };
 		C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830792A45F74C00397EAD /* HeaderMainView.swift */; };
@@ -124,7 +123,6 @@
 		C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonWhite.swift; sourceTree = "<group>"; };
 		C5C10A5D2B3743DC0055511C /* FormCellAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCellAddContactView.swift; sourceTree = "<group>"; };
 		C5C10A5F2B37450C0055511C /* DefaultCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCloseButton.swift; sourceTree = "<group>"; };
-		C5C10A622B374E590055511C /* TypeContactEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeContactEnum.swift; sourceTree = "<group>"; };
 		C5C8389C2A58A9A800270DCB /* RandomDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogView.swift; sourceTree = "<group>"; };
 		C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogViewModel.swift; sourceTree = "<group>"; };
 		C5E830792A45F74C00397EAD /* HeaderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainView.swift; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 		C590417E2B31FA260041FC40 /* ContactBook */ = {
 			isa = PBXGroup;
 			children = (
-				C5C10A612B374D9F0055511C /* Constants */,
 				C59041822B31FB920041FC40 /* SubViews */,
 				C59041812B31FAC80041FC40 /* Models */,
 				C59041802B31FABD0041FC40 /* ViewModels */,
@@ -472,14 +469,6 @@
 				C5C10A5F2B37450C0055511C /* DefaultCloseButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		C5C10A612B374D9F0055511C /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C5C10A622B374E590055511C /* TypeContactEnum.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		C5C838972A58A95600270DCB /* RandomDog */ = {
@@ -720,7 +709,6 @@
 				C58049B22A52462100DFB03D /* HttpRequest.swift in Sources */,
 				C59041942B323EC80041FC40 /* Colors.swift in Sources */,
 				C5E9AD332B35E80B00C0190F /* ButtonAddContactView.swift in Sources */,
-				C5C10A632B374E590055511C /* TypeContactEnum.swift in Sources */,
 				C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */,
 				C590418B2B3200330041FC40 /* ContactBookPersistenceController.swift in Sources */,
 				C5C10A572B372D170055511C /* FormAddContactView.swift in Sources */,
