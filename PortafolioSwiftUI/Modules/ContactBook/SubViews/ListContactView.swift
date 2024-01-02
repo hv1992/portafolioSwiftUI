@@ -5,6 +5,10 @@
 //  Created by Hugo Villagra on 2023-12-22.
 //
 
+/*
+ onLongPressGesture se puede agregar solamente en vista interactivas, no se puede agregar el HStack y VStack porque en teoria no son vistas interactivas, sino son estructuras de vistas.
+*/
+
 import Foundation
 import SwiftUI
 
@@ -40,10 +44,10 @@ struct ListContactView : View {
                     Alert(
                         title: Text(self.viewModel.titleMessageAlert),
                         message: Text(self.viewModel.messageAlert),
-                        primaryButton: .default(Text("Si"), action: {
+                        primaryButton: .default(Text(self.viewModel.titleOkDeleteButton), action: {
                             ContactBookPersistenceController.shared.deleteData(item: contact)
                         }),
-                        secondaryButton: .destructive(Text("No"))
+                        secondaryButton: .destructive(Text(self.viewModel.titleCancelDeleteButton))
                     )
                 }
             }

@@ -11,4 +11,6 @@ class ListContactViewModel {
     let messageNotExistContact = "No existen contactos"
     let titleMessageAlert : String = "Eliminar contacto"
     let messageAlert : String = "¿Desea eliminar el contacto?"
+    let titleOkDeleteButton : String = "Si"
+    let titleCancelDeleteButton : String = "No"
 }
