@@ -5,6 +5,11 @@
 //  Created by Hugo Villagra on 2023-12-21.
 //
 
+/*
+    Cada vez que se muestra la alerta de error al presionar el botón de agregar, la pantalla se refresca, y todo lo ingresados en los campos se borran, por lo que hay que pasarle la información almacenada en ese momento a los componentes (campos), tanto la informacion como su mensaje de error.
+    No solamente hay que pasarle los clousures.
+*/
+
 import SwiftUI
 
 struct AddContactView: View {
