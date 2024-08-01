@@ -42,6 +42,7 @@ struct MainView: View {
     
     //MARK: Hacer despues el acerca de con .sheet (modal)
     var body: some View {
+        //Como esta vista es donde comienza todo, no es necesario agregar en otras partes
         NavigationView {
             VStack {
                 self.headerView
