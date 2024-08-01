@@ -15,15 +15,13 @@ struct ContactBookView: View {
     
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Colors.defaultBackgroundColor
-                VStack {
-                    ListContactView(contacts: contacts)
-                    Spacer()
-                    ButtonAddContactView()
-                    Spacer()
-                }
+        ZStack {
+            Colors.defaultBackgroundColor
+            VStack {
+                ListContactView(contacts: contacts)
+                Spacer()
+                ButtonAddContactView()
+                Spacer()
             }
         }
         .navigationTitle(self.viewModel.titleNavigationBar)
