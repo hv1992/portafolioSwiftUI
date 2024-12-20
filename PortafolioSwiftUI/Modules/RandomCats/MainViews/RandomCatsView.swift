@@ -19,33 +19,31 @@ struct RandomCatsView: View {
     }
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.blue.opacity(0.8).ignoresSafeArea()
-                if listViewCats.isEmpty {
-                    ProgressView(self.viewModel.titleProgressView).progressViewStyle(CircularProgressViewStyle(tint: Color.white)) //Esto es para establecer el color de la animación de progress view.
-                        .foregroundColor(.white)
-                        .onAppear {
-                            Task { // El Task sirve para ejecutar una instrucción asincrona, que para este caso, se hace llamar el listado de gatos.
-                                
-                                //Para entender mejor de los await, es necasario entender que son los actores, y funciones asincronas.
-                                await viewModel.loadListCats()
-                                for cat in self.viewModel.listCatRandom {
-                                    await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.getOwner())
-                                }
+        ZStack {
+            Color.blue.opacity(0.8).ignoresSafeArea()
+            if listViewCats.isEmpty {
+                ProgressView(self.viewModel.titleProgressView).progressViewStyle(CircularProgressViewStyle(tint: Color.white)) //Esto es para establecer el color de la animación de progress view.
+                    .foregroundColor(.white)
+                    .onAppear {
+                        Task { // El Task sirve para ejecutar una instrucción asincrona, que para este caso, se hace llamar el listado de gatos.
+                            
+                            //Para entender mejor de los await, es necasario entender que son los actores, y funciones asincronas.
+                            await viewModel.loadListCats()
+                            for cat in self.viewModel.listCatRandom {
+                                await self.createRandomCatCell(idCatImage: cat.id, informationCat: cat.getOwner())
                             }
                         }
-                } else {
-                    //Esto codigo se usa en vez de usar el List, porque el List no se puede quitar el separador en ios 14, o por lo menos no encontré la forma.
-                    ScrollView {
-                        LazyVStack { //Usa LazyStack, porque se crea el stack solamente si va a ser usado.
-                            ForEach(listViewCats) { cat in
-                                cat
-                            }
-                        }
-                        .padding(.leading)
-                        .padding(.trailing)
                     }
+            } else {
+                //Esto codigo se usa en vez de usar el List, porque el List no se puede quitar el separador en ios 14, o por lo menos no encontré la forma.
+                ScrollView {
+                    LazyVStack { //Usa LazyStack, porque se crea el stack solamente si va a ser usado.
+                        ForEach(listViewCats) { cat in
+                            cat
+                        }
+                    }
+                    .padding(.leading)
+                    .padding(.trailing)
                 }
             }
         }
