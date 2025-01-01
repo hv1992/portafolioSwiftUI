@@ -19,6 +19,8 @@ struct PortafolioSwiftUIApp: App {
     //Esto es para controlar el ciclo de vida de la aplicación, por medio de la scene.
     @Environment(\.scenePhase) var scenePhase
     
+    var globalVariable = GlobalModel() //Esto seria como una variable global que se va a usar en todo el aplicativo
+    
     init() {
         print("Es el contructor que se ejecuta primero")
     }
@@ -28,6 +30,7 @@ struct PortafolioSwiftUIApp: App {
             MainView()
                 //Esto es para que puedas administrar la gestión de guardado del libro de contactos en el core data.
                 .environment(\.managedObjectContext,contactBookPersistence.container.viewContext)
+                .environmentObject(globalVariable) //Aqui estamos estableciendo la variable global que se va a usar en todo el proyecto. La ventaja del environment es que, cuando se modifica los valores de la clase, se modifica tambien en todo las vista a la vez.
             
         //Aqui es donde se controla el ciclo de vida de la app.
         }.onChange(of: scenePhase, perform: { phase in
