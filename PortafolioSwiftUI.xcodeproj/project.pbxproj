@@ -55,6 +55,8 @@
 		C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389C2A58A9A800270DCB /* RandomDogView.swift */; };
 		C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */; };
 		C5E6418B2D25AAA30019569C /* HttpRequest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6418A2D25AAA30019569C /* HttpRequest2.swift */; };
+		C5E6418D2D2610D90019569C /* TypeHttpEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */; };
+		C5E641912D2625450019569C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E641902D2625400019569C /* StringExtension.swift */; };
 		C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830792A45F74C00397EAD /* HeaderMainView.swift */; };
 		C5E8307D2A45F87C00397EAD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8307C2A45F87C00397EAD /* MainViewModel.swift */; };
 		C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8307F2A46197000397EAD /* MenuOptionModel.swift */; };
@@ -134,6 +136,8 @@
 		C5C8389C2A58A9A800270DCB /* RandomDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogView.swift; sourceTree = "<group>"; };
 		C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogViewModel.swift; sourceTree = "<group>"; };
 		C5E6418A2D25AAA30019569C /* HttpRequest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest2.swift; sourceTree = "<group>"; };
+		C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeHttpEnum.swift; sourceTree = "<group>"; };
+		C5E641902D2625400019569C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C5E830792A45F74C00397EAD /* HeaderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainView.swift; sourceTree = "<group>"; };
 		C5E8307C2A45F87C00397EAD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C5E8307F2A46197000397EAD /* MenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionModel.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				C58049B12A52462100DFB03D /* HttpRequest.swift */,
 				C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */,
 				C5E6418A2D25AAA30019569C /* HttpRequest2.swift */,
+				C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 		C5380E9A2A53A2E70000B0D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C5E6418F2D26253A0019569C /* String */,
 				C5380E9B2A53A2FB0000B0D0 /* Image */,
 			);
 			path = Extensions;
@@ -585,6 +591,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		C5E6418F2D26253A0019569C /* String */ = {
+			isa = PBXGroup;
+			children = (
+				C5E641902D2625400019569C /* StringExtension.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		C5E8307B2A45F78700397EAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,8 +787,10 @@
 				C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */,
 				C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */,
 				C5A537D72B37B26300FE7702 /* ListContactViewModel.swift in Sources */,
+				C5E641912D2625450019569C /* StringExtension.swift in Sources */,
 				C5E6418B2D25AAA30019569C /* HttpRequest2.swift in Sources */,
 				C5C537642D1F3A5500F312C7 /* ListaGridView.swift in Sources */,
+				C5E6418D2D2610D90019569C /* TypeHttpEnum.swift in Sources */,
 				C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */,
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
 				C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */,
