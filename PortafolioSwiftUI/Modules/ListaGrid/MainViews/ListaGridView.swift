@@ -22,7 +22,9 @@ struct ListaGridView: View {
                     .multilineTextAlignment(.center)
                     .keyboardType(.numberPad)
                 DefaultButtonBlue(titleButton: self.viewModel.titleButtonObtenerEmojis, actionButton: {
-                    self.viewModel.obtenerListadoEmojis()
+                    Task { //Aqui estoy indicando que voy a ejecutar una instruccion asincrona
+                        await self.viewModel.obtenerListadoEmojis()
+                    }
                 })
             }
         ))

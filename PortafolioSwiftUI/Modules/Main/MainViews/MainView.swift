@@ -95,7 +95,7 @@ struct MainContainerView: View {
                         view
                     }
                 } else if view.viewModel.codeOption == .listaGrip {
-                    NavigationLink(destination: ContactBookView()) {
+                    NavigationLink(destination: ListaGridView()) {
                         view
                     }
                 }
