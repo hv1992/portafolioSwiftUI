@@ -26,6 +26,22 @@ struct ListaGridView: View {
                         await self.viewModel.obtenerListadoEmojis()
                     }
                 })
+                if self.viewModel.listGrid.isEmpty {
+                    Spacer()
+                } else {
+                    ScrollView(){
+                        LazyVGrid(columns: self.viewModel.listGrid, spacing: 30) {
+                            ForEach(self.viewModel.finalResult){ item in
+                                Text(item.character ?? "").font(.system(size: 80))
+                            }
+                        }
+                    }
+                }
+            }.alert(isPresented: self.viewModel.showAlert) {
+                Alert(
+                    title: Text(self.viewModel.titleAlert),
+                    message: Text(self.viewModel.messageAlert)
+                )
             }
         ))
     }
