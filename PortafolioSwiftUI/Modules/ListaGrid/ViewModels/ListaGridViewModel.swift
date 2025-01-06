@@ -10,9 +10,7 @@ import SwiftUI
 
 class ListaGridViewModel : ObservableObject {
     
-    let cantidadMaximoEmojis : Int = 20
-    var _showAlert : Bool = false
-    var cantidadEmojis : String = ""
+    let cantidadMaximoEmojis : Int = 10
     let messageAlert : String
     let titleAlert : String = "Error"
     let messageButton : String = "Entendido"
@@ -23,27 +21,23 @@ class ListaGridViewModel : ObservableObject {
     
     @Published var finalResult : [EmojiModel] = []
     @Published var listGrid : [GridItem] = []
-    
-    
-    var showAlert : Binding<Bool> {
-        .init(get: { self._showAlert }, set: { self._showAlert = $0 })
-    }
-    var textFieldCantidadEmojis : Binding<String> {
-        .init(get: { self.cantidadEmojis }, set: { self.cantidadEmojis = $0 })
-    }
+    @Published var showAlert : Bool = false
+    @Published var cantidadEmojis : String = ""
     
     init() {
         //Tenemos que agregar el mensaje dentro de un constructor para que podamos usar la variable "cantidadMaximoEmojis"
         self.messageAlert = "La cantidad de emojis debe ser mayor a 0 y menor o igual a \(cantidadMaximoEmojis)"
     }
     
+    /// función que sirve para obtener el listado de emojis, y mostrar los mismos de forma aleatoria, de acuerdo a la cantidad de emojis solicitados
     func obtenerListadoEmojis() async {
         
-        self._showAlert = false //Establecemos por defecto para que no muestre la alerta
+        //El MainActor.run es para forzar para ejecutarlo en el hilo principal, pero para ello, la clase tiene que ser de tipo actor
+        await MainActor.run {
+            self.showAlert = false //Establecemos por defecto para que no muestre la alerta
+        }
         
-        var numerosGrid : Int = Int(self.cantidadEmojis) ?? 0 //Convertimos la cantidad de emojis ingresados por el usuario a número entero
-        
-        
+        let numerosGrid : Int = Int(self.cantidadEmojis) ?? 0 //Convertimos la cantidad de emojis ingresados por el usuario a número entero
         
         do {
             //Pregunta si la lista esta vacia, y si se cumple, hace la llamada, y guardamos el resultado en una variable
@@ -57,6 +51,9 @@ class ListaGridViewModel : ObservableObject {
             if numerosGrid <= countEmojis && numerosGrid <= self.cantidadMaximoEmojis {
                 
                 await MainActor.run {
+                    //Se resea la cantidad de emojis a trabajar
+                    self.finalResult.removeAll()
+                    
                     self.listGrid = Array.init(repeating: GridItem(.flexible()), count: numerosGrid) //Creamos un array de GridItem de acuerdo a la cantidad ingresada por el usuario
                     
                     // Hacemos un contador para que carguemos en forma aleatoria los emojis que vamos a mostrar, de acuerdo a la cantidad de emojis que vamos a mostrar
@@ -66,12 +63,25 @@ class ListaGridViewModel : ObservableObject {
                 }
             } else {
                 //Caso contrario, se muestra el mensaje de alerta
-                self._showAlert = true
+                await MainActor.run {
+                    self.showAlert = true
+                }
                 return
             }
         } catch {
             print(error)
         }
         
+    }
+    
+    /// Se resea los valores a valores por defecto
+    func resetValues() {
+        self.cantidadEmojis = ""
+        self.result.removeAll()
+        
+        self.finalResult = []
+        self.listGrid = []
+        self.showAlert = false
+        self.cantidadEmojis = ""
     }
 }
