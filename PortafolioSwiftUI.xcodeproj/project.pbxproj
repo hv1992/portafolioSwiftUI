@@ -49,8 +49,15 @@
 		C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */; };
 		C5C10A5E2B3743DC0055511C /* FormCellAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5D2B3743DC0055511C /* FormCellAddContactView.swift */; };
 		C5C10A602B37450C0055511C /* DefaultCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C10A5F2B37450C0055511C /* DefaultCloseButton.swift */; };
+		C5C537642D1F3A5500F312C7 /* ListaGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C537632D1F3A5500F312C7 /* ListaGridView.swift */; };
+		C5C537672D1F3B7F00F312C7 /* DefaultBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C537662D1F3B7F00F312C7 /* DefaultBackgroundView.swift */; };
+		C5C537692D1F400500F312C7 /* ListaGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C537682D1F400500F312C7 /* ListaGridViewModel.swift */; };
 		C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389C2A58A9A800270DCB /* RandomDogView.swift */; };
 		C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */; };
+		C5E6418B2D25AAA30019569C /* HttpRequest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6418A2D25AAA30019569C /* HttpRequest2.swift */; };
+		C5E6418D2D2610D90019569C /* TypeHttpEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */; };
+		C5E641912D2625450019569C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E641902D2625400019569C /* StringExtension.swift */; };
+		C5E641932D262F9C0019569C /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E641922D262F980019569C /* EmojiModel.swift */; };
 		C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E830792A45F74C00397EAD /* HeaderMainView.swift */; };
 		C5E8307D2A45F87C00397EAD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8307C2A45F87C00397EAD /* MainViewModel.swift */; };
 		C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E8307F2A46197000397EAD /* MenuOptionModel.swift */; };
@@ -59,6 +66,7 @@
 		C5E9AD312B35E7E200C0190F /* ListContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD302B35E7E200C0190F /* ListContactView.swift */; };
 		C5E9AD332B35E80B00C0190F /* ButtonAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD322B35E80B00C0190F /* ButtonAddContactView.swift */; };
 		C5E9AD352B35E8F900C0190F /* TitleAddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */; };
+		C5F4D0122D1E5349001A0BD4 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4D0112D1E5346001A0BD4 /* GlobalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +131,15 @@
 		C5C10A5B2B373C230055511C /* DefaultButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonWhite.swift; sourceTree = "<group>"; };
 		C5C10A5D2B3743DC0055511C /* FormCellAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCellAddContactView.swift; sourceTree = "<group>"; };
 		C5C10A5F2B37450C0055511C /* DefaultCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCloseButton.swift; sourceTree = "<group>"; };
+		C5C537632D1F3A5500F312C7 /* ListaGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaGridView.swift; sourceTree = "<group>"; };
+		C5C537662D1F3B7F00F312C7 /* DefaultBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackgroundView.swift; sourceTree = "<group>"; };
+		C5C537682D1F400500F312C7 /* ListaGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaGridViewModel.swift; sourceTree = "<group>"; };
 		C5C8389C2A58A9A800270DCB /* RandomDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogView.swift; sourceTree = "<group>"; };
 		C5C8389E2A58AB2F00270DCB /* RandomDogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogViewModel.swift; sourceTree = "<group>"; };
+		C5E6418A2D25AAA30019569C /* HttpRequest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest2.swift; sourceTree = "<group>"; };
+		C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeHttpEnum.swift; sourceTree = "<group>"; };
+		C5E641902D2625400019569C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C5E641922D262F980019569C /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		C5E830792A45F74C00397EAD /* HeaderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMainView.swift; sourceTree = "<group>"; };
 		C5E8307C2A45F87C00397EAD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C5E8307F2A46197000397EAD /* MenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionModel.swift; sourceTree = "<group>"; };
@@ -133,6 +148,7 @@
 		C5E9AD302B35E7E200C0190F /* ListContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactView.swift; sourceTree = "<group>"; };
 		C5E9AD322B35E80B00C0190F /* ButtonAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAddContactView.swift; sourceTree = "<group>"; };
 		C5E9AD342B35E8F900C0190F /* TitleAddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAddContactView.swift; sourceTree = "<group>"; };
+		C5F4D0112D1E5346001A0BD4 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +218,8 @@
 			children = (
 				C58049B12A52462100DFB03D /* HttpRequest.swift */,
 				C5B3D7842A55F3E600B82CFB /* SafariWebView.swift */,
+				C5E6418A2D25AAA30019569C /* HttpRequest2.swift */,
+				C5E6418C2D2610D90019569C /* TypeHttpEnum.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -209,6 +227,8 @@
 		C5380E992A53A2DB0000B0D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C5C537652D1F3AAB00F312C7 /* Views */,
+				C5F4D0102D1E5340001A0BD4 /* Models */,
 				C59041902B323E840041FC40 /* SwiftUIElements */,
 				C59041832B31FE130041FC40 /* CoreDatas */,
 				C5B3D7862A56063200B82CFB /* NavigationBar */,
@@ -220,6 +240,7 @@
 		C5380E9A2A53A2E70000B0D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C5E6418F2D26253A0019569C /* String */,
 				C5380E9B2A53A2FB0000B0D0 /* Image */,
 			);
 			path = Extensions;
@@ -415,6 +436,7 @@
 		C59191BC2A44DD3E003B48F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5375C2D1F37F700F312C7 /* ListaGrid */,
 				C590417E2B31FA260041FC40 /* ContactBook */,
 				C5C838972A58A95600270DCB /* RandomDog */,
 				C53649DD2A4CCF1C00E6F632 /* RandomCats */,
@@ -471,6 +493,56 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		C5C5375C2D1F37F700F312C7 /* ListaGrid */ = {
+			isa = PBXGroup;
+			children = (
+				C5C537602D1F3A0700F312C7 /* SubViews */,
+				C5C5375F2D1F39F300F312C7 /* MainViews */,
+				C5C5375E2D1F39EE00F312C7 /* Models */,
+				C5C5375D2D1F39E700F312C7 /* ViewModels */,
+			);
+			path = ListaGrid;
+			sourceTree = "<group>";
+		};
+		C5C5375D2D1F39E700F312C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C5C537682D1F400500F312C7 /* ListaGridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C5C5375E2D1F39EE00F312C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5E641922D262F980019569C /* EmojiModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5C5375F2D1F39F300F312C7 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				C5C537632D1F3A5500F312C7 /* ListaGridView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		C5C537602D1F3A0700F312C7 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		C5C537652D1F3AAB00F312C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5C537662D1F3B7F00F312C7 /* DefaultBackgroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C5C838972A58A95600270DCB /* RandomDog */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +594,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		C5E6418F2D26253A0019569C /* String */ = {
+			isa = PBXGroup;
+			children = (
+				C5E641902D2625400019569C /* StringExtension.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		C5E8307B2A45F78700397EAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +617,14 @@
 			isa = PBXGroup;
 			children = (
 				C5E8307F2A46197000397EAD /* MenuOptionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5F4D0102D1E5340001A0BD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4D0112D1E5346001A0BD4 /* GlobalModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -700,8 +788,13 @@
 				C5E830822A461A9600397EAD /* HeaderMainViewModel.swift in Sources */,
 				C59767A32A5F01140056A122 /* DogImageModel.swift in Sources */,
 				C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */,
+				C5E641932D262F9C0019569C /* EmojiModel.swift in Sources */,
 				C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */,
 				C5A537D72B37B26300FE7702 /* ListContactViewModel.swift in Sources */,
+				C5E641912D2625450019569C /* StringExtension.swift in Sources */,
+				C5E6418B2D25AAA30019569C /* HttpRequest2.swift in Sources */,
+				C5C537642D1F3A5500F312C7 /* ListaGridView.swift in Sources */,
+				C5E6418D2D2610D90019569C /* TypeHttpEnum.swift in Sources */,
 				C5B3D7852A55F3E600B82CFB /* SafariWebView.swift in Sources */,
 				C59191902A44DB9D003B48F1 /* PortafolioSwiftUIApp.swift in Sources */,
 				C5C8389D2A58A9A800270DCB /* RandomDogView.swift in Sources */,
@@ -714,6 +807,9 @@
 				C5C10A572B372D170055511C /* FormAddContactView.swift in Sources */,
 				C590418F2B323B580041FC40 /* ContactBookView.swift in Sources */,
 				C5A537D52B37B1A300FE7702 /* ButtonAddContactViewModel.swift in Sources */,
+				C5C537692D1F400500F312C7 /* ListaGridViewModel.swift in Sources */,
+				C5F4D0122D1E5349001A0BD4 /* GlobalModel.swift in Sources */,
+				C5C537672D1F3B7F00F312C7 /* DefaultBackgroundView.swift in Sources */,
 				C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */,
 				C5A537D12B37A23000FE7702 /* FormCellAddContactViewModel.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,

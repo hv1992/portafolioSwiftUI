@@ -24,6 +24,7 @@ class RandomDogViewModel : ObservableObject {
     
     func getListRaceDogs() async -> DogRaceModel? {
         do {
+            //El await sirve para hacer la llamada asincrona del metodo requestCodable. Esto se conoce como "Cross-actor reference"
             let raceDogList : DogRaceModel = try await HttpRequest.shared.requestCodable(urlString: urlRequestListRace,parameters: nil,headers: nil)
             return raceDogList
         } catch (let error) {

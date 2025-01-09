@@ -94,6 +94,10 @@ struct MainContainerView: View {
                     NavigationLink(destination: ContactBookView()) {
                         view
                     }
+                } else if view.viewModel.codeOption == .listaGrip {
+                    NavigationLink(destination: ListaGridView()) {
+                        view
+                    }
                 }
             }
             Spacer() //Esto es para completar el espacio libre

@@ -12,6 +12,9 @@ struct InformationAppView: View {
     //El @Envoronment sirve para obtener un valor de esta vista, que en este caso, el valor a obtener el modo de presentación
     @Environment(\.presentationMode) var back
     
+    //Un ejemplo de la sintaxis para mostrar como invocar la variable global
+    @EnvironmentObject var globalData : GlobalModel
+    
     var viewModel : InformationAppViewModel = InformationAppViewModel()
     
     var body: some View {
