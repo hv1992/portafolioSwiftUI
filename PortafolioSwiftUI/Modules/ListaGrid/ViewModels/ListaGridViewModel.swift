@@ -16,6 +16,9 @@ class ListaGridViewModel : ObservableObject {
     let messageButton : String = "Entendido"
     let titleCantidadEmojis : String = "Ingrese la cantidad de emojis"
     let titleButtonObtenerEmojis : String = "Obtener emojis"
+    let titleNavigationView : String = "Lista Grip"
+    let titleOptionsToolbar : [String] = ["Vertical", "Horizontal"]
+    let titleToolbar : String = "Opciones"
     
     var result : [EmojiModel] = []
     
@@ -23,6 +26,7 @@ class ListaGridViewModel : ObservableObject {
     @Published var listGrid : [GridItem] = []
     @Published var showAlert : Bool = false
     @Published var cantidadEmojis : String = ""
+    @Published var posListGrid : Int = 0
     
     init() {
         //Tenemos que agregar el mensaje dentro de un constructor para que podamos usar la variable "cantidadMaximoEmojis"
@@ -83,5 +87,6 @@ class ListaGridViewModel : ObservableObject {
         self.listGrid = []
         self.showAlert = false
         self.cantidadEmojis = ""
+        self.posListGrid = 0
     }
 }
