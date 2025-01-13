@@ -12,7 +12,7 @@ class MainViewModel {
         MenuOptionModel(nameIcon: "catIcon",titleMenuOption: "Cat Randoms Image",codeOption: .catImage),
         MenuOptionModel(nameIcon: "dogIcon",titleMenuOption: "Random Dog Image",codeOption: .dogImage),
         MenuOptionModel(nameIcon: "contactIcon",titleMenuOption: "Contacts List",codeOption: .contactList),
-        MenuOptionModel(nameIcon: "listaGrip",titleMenuOption: "Lista Grip",codeOption: .listaGrip)
+        MenuOptionModel(nameIcon: "listagrip",titleMenuOption: "Lista Grip",codeOption: .listaGrip)
     ]
     
     let nameAvatarHeader : String = "LogoApp"
