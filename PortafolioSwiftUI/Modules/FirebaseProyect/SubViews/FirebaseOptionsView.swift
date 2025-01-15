@@ -19,7 +19,19 @@ struct FirebaseOptionsView: View {
     var body: some View {
         VStack {
             ForEach(viewModel.listOptions) { view in
-                view
+                if view.viewModel.firebaseOption == .auth {
+                    NavigationLink(destination: RandomDogView()) {
+                        view
+                    }
+                } else if view.viewModel.firebaseOption == .firestore {
+                    NavigationLink(destination: RandomDogView()) {
+                        view
+                    }
+                } else if view.viewModel.firebaseOption == .storage {
+                    NavigationLink(destination: RandomDogView()) {
+                        view
+                    }
+                }
             }
         }
     }

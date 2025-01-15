@@ -13,4 +13,8 @@ class FirebaseProyectOptionsViewModel: ObservableObject {
         FirebaseOptionView(titleOption: "Storage", nameImage: "storage", firebaseOption: .storage),
         FirebaseOptionView(titleOption: "Database", nameImage: "database", firebaseOption: .firestore),
     ]
+    
+    let titleFirebaseOptions : String = "Firebase Options"
+    
+    let navigationTitle : String = "Firebase"
 }

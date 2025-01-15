@@ -12,4 +12,5 @@ enum MenuOptionCode {
     case dogImage
     case contactList
     case listaGrip
+    case firebase
 }

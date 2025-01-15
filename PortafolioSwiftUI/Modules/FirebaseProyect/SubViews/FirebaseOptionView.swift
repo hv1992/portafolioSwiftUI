@@ -23,7 +23,7 @@ struct FirebaseOptionView: View,Identifiable{
     var body: some View {
         HStack {
             Image(self.viewModel.nameImage).resizable().frame(width: 50,height: 50)
-            Text(self.viewModel.titleOption)
+            Text(self.viewModel.titleOption).foregroundColor(Color.black)
             Spacer()
         }.padding(.leading,16.0)
             .padding(.trailing,8.0)

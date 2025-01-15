@@ -14,9 +14,11 @@ struct FirebaseProyectOptionsView: View {
     var body: some View {
         DefaultBackgroundView(containerView: AnyView(
             VStack {
+                Text(self.viewModel.titleFirebaseOptions).font(.title)
+                    .foregroundColor(.white)
                 FirebaseOptionsView(listOptions: self.viewModel.listOptions)
                 Spacer()
-            }
+            }.navigationTitle(self.viewModel.navigationTitle)
             
         ))
     }

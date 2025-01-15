@@ -98,6 +98,10 @@ struct MainContainerView: View {
                     NavigationLink(destination: ListaGridView()) {
                         view
                     }
+                } else if view.viewModel.codeOption == .firebase {
+                    NavigationLink(destination: FirebaseProyectOptionsView()) {
+                        view
+                    }
                 }
             }
             Spacer() //Esto es para completar el espacio libre
@@ -118,5 +122,9 @@ struct MainContainerView: View {
             .onDisappear {
                 print("desaparece la vista VStack")
             }
+    }
+    
+    func actionSelected(menuSelected : MenuOptionCode) {
+        
     }
 }
