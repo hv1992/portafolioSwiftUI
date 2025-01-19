@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078262D38330500261D0C /* FirebaseAuthView.swift */; };
+		C51078292D38340F00261D0C /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */; };
 		C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E2DB32B34692700FBDD44 /* AddContactView.swift */; };
 		C52E2DB62B3469CD00FBDD44 /* AddContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E2DB52B3469CD00FBDD44 /* AddContactViewModel.swift */; };
 		C53649E22A4CD19400E6F632 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E12A4CD19400E6F632 /* CatModel.swift */; };
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51078262D38330500261D0C /* FirebaseAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthView.swift; sourceTree = "<group>"; };
+		C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
 		C52E2DB32B34692700FBDD44 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		C52E2DB52B3469CD00FBDD44 /* AddContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewModel.swift; sourceTree = "<group>"; };
 		C53649E12A4CD19400E6F632 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				C58DB75C2D32099B00504FEF /* FirebaseProyectOptionsView.swift */,
+				C51078262D38330500261D0C /* FirebaseAuthView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				C5637F592D359D5400E91E3C /* FirebaseOptionsViewModel.swift */,
 				C58DB7642D322E2A00504FEF /* FirebaseOptionViewModel.swift */,
 				C5637F5B2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift */,
+				C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -874,6 +880,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */,
 				C5782DC52A5DCD8C00584D15 /* MenuOptionCode.swift in Sources */,
 				C58049AB2A51E76100DFB03D /* AppDelegate.swift in Sources */,
 				C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */,
@@ -882,6 +889,7 @@
 				C5E8307D2A45F87C00397EAD /* MainViewModel.swift in Sources */,
 				C58DB75D2D32099B00504FEF /* FirebaseProyectOptionsView.swift in Sources */,
 				C58049B02A5241E400DFB03D /* RandomCatCellViewModel.swift in Sources */,
+				C51078292D38340F00261D0C /* FirebaseAuthViewModel.swift in Sources */,
 				C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */,
 				C5782DC22A5DA22600584D15 /* DogRaceModel.swift in Sources */,
 				C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */,

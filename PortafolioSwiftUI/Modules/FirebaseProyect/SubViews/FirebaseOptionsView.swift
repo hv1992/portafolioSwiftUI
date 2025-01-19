@@ -20,7 +20,7 @@ struct FirebaseOptionsView: View {
         VStack {
             ForEach(viewModel.listOptions) { view in
                 if view.viewModel.firebaseOption == .auth {
-                    NavigationLink(destination: RandomDogView()) {
+                    NavigationLink(destination: FirebaseAuthView()) {
                         view
                     }
                 } else if view.viewModel.firebaseOption == .firestore {
