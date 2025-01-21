@@ -27,16 +27,9 @@ struct FirebaseAuthView: View {
         DefaultBackgroundView(containerView: AnyView(
             VStack(alignment: .center) {
                 Text(self.viewModel.titleFirstCamp).font(.title2)
-                TextField(self.viewModel.titleFirstCamp, text: $usuarioText)
-                    .multilineTextAlignment(.center)
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.emailAddress)
-                    .disableAutocorrection(true)
+                DefaultTextFieldView(titleTextField: self.viewModel.titleFirstCamp, typeTextField: .email, textEntryTextField: $usuarioText)
                 Text(self.viewModel.titleSecondCamp).font(.title2)
-                TextField(self.viewModel.titleSecondCamp, text: $passwordText)
-                    .multilineTextAlignment(.center)
-                    .textFieldStyle(.roundedBorder)
-                    .disableAutocorrection(true)
+                DefaultTextFieldView(titleTextField: self.viewModel.titleSecondCamp, typeTextField: .password, textEntryTextField: $passwordText)
                 HStack {
                     DefaultButtonBlue(titleButton: self.viewModel.titleFirstButton) {
                         self.viewModel.signInt(email: self.usuarioText, password: self.passwordText)

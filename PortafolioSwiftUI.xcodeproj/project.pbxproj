@@ -15,6 +15,9 @@
 		C53649E62A4CD22B00E6F632 /* RandomCatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */; };
 		C53649E82A4CD4C800E6F632 /* RandomCatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */; };
 		C5380E9D2A53A30D0000B0D0 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5380E9C2A53A30D0000B0D0 /* ImageExtension.swift */; };
+		C558D9412D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D9402D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift */; };
+		C558D9432D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D9422D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift */; };
+		C558D9452D3F3C61003F7A6C /* DefaultTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D9442D3F3C61003F7A6C /* DefaultTextFieldView.swift */; };
 		C5637F5A2D359D5F00E91E3C /* FirebaseOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5637F592D359D5400E91E3C /* FirebaseOptionsViewModel.swift */; };
 		C5637F5C2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5637F5B2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift */; };
 		C5782DC22A5DA22600584D15 /* DogRaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5782DC12A5DA22600584D15 /* DogRaceModel.swift */; };
@@ -113,6 +116,9 @@
 		C53649E52A4CD22B00E6F632 /* RandomCatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsView.swift; sourceTree = "<group>"; };
 		C53649E72A4CD4C800E6F632 /* RandomCatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCatsViewModel.swift; sourceTree = "<group>"; };
 		C5380E9C2A53A30D0000B0D0 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		C558D9402D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreAddInformationView.swift; sourceTree = "<group>"; };
+		C558D9422D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreAddInformationViewModel.swift; sourceTree = "<group>"; };
+		C558D9442D3F3C61003F7A6C /* DefaultTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextFieldView.swift; sourceTree = "<group>"; };
 		C5637F592D359D5400E91E3C /* FirebaseOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOptionsViewModel.swift; sourceTree = "<group>"; };
 		C5637F5B2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProyectOptionsViewModel.swift; sourceTree = "<group>"; };
 		C5782DC12A5DA22600584D15 /* DogRaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRaceModel.swift; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 			children = (
 				C58DB75C2D32099B00504FEF /* FirebaseProyectOptionsView.swift */,
 				C51078262D38330500261D0C /* FirebaseAuthView.swift */,
+				C558D9402D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -367,6 +374,7 @@
 				C58DB7642D322E2A00504FEF /* FirebaseOptionViewModel.swift */,
 				C5637F5B2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift */,
 				C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */,
+				C558D9422D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -643,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C537662D1F3B7F00F312C7 /* DefaultBackgroundView.swift */,
+				C558D9442D3F3C61003F7A6C /* DefaultTextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -880,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C558D9412D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift in Sources */,
 				C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */,
 				C5782DC52A5DCD8C00584D15 /* MenuOptionCode.swift in Sources */,
 				C58049AB2A51E76100DFB03D /* AppDelegate.swift in Sources */,
@@ -892,6 +902,7 @@
 				C51078292D38340F00261D0C /* FirebaseAuthViewModel.swift in Sources */,
 				C5E830802A46197000397EAD /* MenuOptionModel.swift in Sources */,
 				C5782DC22A5DA22600584D15 /* DogRaceModel.swift in Sources */,
+				C558D9452D3F3C61003F7A6C /* DefaultTextFieldView.swift in Sources */,
 				C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */,
 				C5637F5C2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift in Sources */,
 				C58049AE2A5241CE00DFB03D /* RandomCatCellView.swift in Sources */,
@@ -935,6 +946,7 @@
 				C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */,
 				C5A537D12B37A23000FE7702 /* FormCellAddContactViewModel.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
+				C558D9432D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift in Sources */,
 				C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */,
 				C5E8307A2A45F74C00397EAD /* HeaderMainView.swift in Sources */,
 				C59041862B31FE580041FC40 /* ContactContainer.xcdatamodeld in Sources */,
