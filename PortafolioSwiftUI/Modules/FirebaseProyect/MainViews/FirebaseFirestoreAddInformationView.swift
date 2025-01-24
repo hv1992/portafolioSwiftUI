@@ -36,7 +36,7 @@ struct FirebaseFirestoreAddInformationView: View {
             }.padding(.leading,16).padding(.trailing,16)
                 .navigationTitle(self.viewModel.titleNavigationView)
                 .alert(isPresented: showAlert) {
-                    Alert(title: Text("Error"), message: Text(self.viewModel.messageAlert))
+                    Alert(title: Text(self.viewModel.titleAlert), message: Text(self.viewModel.messageAlert))
                 }
         ))
     }

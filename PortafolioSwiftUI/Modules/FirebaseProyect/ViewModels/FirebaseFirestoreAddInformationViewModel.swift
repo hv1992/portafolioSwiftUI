@@ -16,6 +16,7 @@ class FirebaseFirestoreAddInformationViewModel: ObservableObject {
     let titlePhoneUser : String = "Teléfono"
     let titleButtonSaveUser : String = "Guardar"
     let titleNavigationView : String = "Agregar información"
+    let titleAlert : String = "Atención"
     
     @Published var messageAlert : String = ""
     @Published var showAlert : Bool = false
@@ -24,7 +25,6 @@ class FirebaseFirestoreAddInformationViewModel: ObservableObject {
         
         // GUARDAR TEXTO
         let db = Firestore.firestore()
-        let id = UUID().uuidString
         guard let idUser = Auth.auth().currentUser?.uid else {
             self.messageAlert = "El usuario no está logueado"
             self.showAlert = true
@@ -35,8 +35,8 @@ class FirebaseFirestoreAddInformationViewModel: ObservableObject {
             self.showAlert = true
             return
         }
-        let campos : [String:Any] = ["idUser":idUser,"nombreUsuario":nombreUsuario,"apellidoUsuario":apellidoUsuario,"correo":email,"telefono":telefonoUsuario]
-        db.collection("datosUsuarios").document(id).setData(campos){error in
+        let campos : [String:Any] = ["nombreUsuario":nombreUsuario,"apellidoUsuario":apellidoUsuario,"correo":email,"telefono":telefonoUsuario]
+        db.collection("datosUsuarios").document(idUser).setData(campos){error in
             if let error = error?.localizedDescription{
                 self.messageAlert = error
                 self.showAlert = true
