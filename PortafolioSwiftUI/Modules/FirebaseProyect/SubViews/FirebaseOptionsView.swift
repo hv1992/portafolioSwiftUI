@@ -24,11 +24,15 @@ struct FirebaseOptionsView: View {
                         view
                     }
                 } else if view.viewModel.firebaseOption == .firestore {
-                    NavigationLink(destination: RandomDogView()) {
+                    NavigationLink(destination: FirebaseFirestoreOptionsView()) {
                         view
                     }
-                } else if view.viewModel.firebaseOption == .storage {
+                } else if view.viewModel.firebaseOption == .firestoreAdd {
                     NavigationLink(destination: FirebaseFirestoreAddInformationView()) {
+                        view
+                    }
+                } else if view.viewModel.firebaseOption == .firestoreShow {
+                    NavigationLink(destination: RandomDogView()) {
                         view
                     }
                 }

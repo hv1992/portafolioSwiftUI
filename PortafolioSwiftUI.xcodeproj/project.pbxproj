@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50BDA3E2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */; };
+		C50BDA402D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */; };
 		C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078262D38330500261D0C /* FirebaseAuthView.swift */; };
 		C51078292D38340F00261D0C /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */; };
 		C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E2DB32B34692700FBDD44 /* AddContactView.swift */; };
@@ -108,6 +110,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreOptionsView.swift; sourceTree = "<group>"; };
+		C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreOptionsViewModel.swift; sourceTree = "<group>"; };
 		C51078262D38330500261D0C /* FirebaseAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthView.swift; sourceTree = "<group>"; };
 		C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
 		C52E2DB32B34692700FBDD44 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 				C58DB75C2D32099B00504FEF /* FirebaseProyectOptionsView.swift */,
 				C51078262D38330500261D0C /* FirebaseAuthView.swift */,
 				C558D9402D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift */,
+				C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				C5637F5B2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift */,
 				C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */,
 				C558D9422D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift */,
+				C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -909,6 +915,7 @@
 				C58DB7652D322E3300504FEF /* FirebaseOptionViewModel.swift in Sources */,
 				C5C10A5E2B3743DC0055511C /* FormCellAddContactView.swift in Sources */,
 				C59191922A44DB9D003B48F1 /* MainView.swift in Sources */,
+				C50BDA402D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift in Sources */,
 				C5C10A602B37450C0055511C /* DefaultCloseButton.swift in Sources */,
 				C59191C22A44E3EA003B48F1 /* OptionMainView.swift in Sources */,
 				C5C10A5A2B3739BC0055511C /* DefaultButtonBlue.swift in Sources */,
@@ -921,6 +928,7 @@
 				C5B3D7882A56064F00B82CFB /* ThemeNavigationBar.swift in Sources */,
 				C5E641932D262F9C0019569C /* EmojiModel.swift in Sources */,
 				C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */,
+				C50BDA3E2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift in Sources */,
 				C5A537D72B37B26300FE7702 /* ListContactViewModel.swift in Sources */,
 				C5E641912D2625450019569C /* StringExtension.swift in Sources */,
 				C5E6418B2D25AAA30019569C /* HttpRequest2.swift in Sources */,

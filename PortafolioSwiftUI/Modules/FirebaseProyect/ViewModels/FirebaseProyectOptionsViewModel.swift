@@ -10,7 +10,6 @@ import Foundation
 class FirebaseProyectOptionsViewModel: ObservableObject {
     @Published var listOptions : [FirebaseOptionView] = [
         FirebaseOptionView(titleOption: "Authentication", nameImage: "authenticator", firebaseOption: .auth),
-        FirebaseOptionView(titleOption: "Storage", nameImage: "storage", firebaseOption: .storage),
         FirebaseOptionView(titleOption: "Database", nameImage: "database", firebaseOption: .firestore),
     ]
     

@@ -8,5 +8,6 @@
 enum FirebaseOptionsEnum {
     case auth
     case firestore
-    case storage
+    case firestoreAdd
+    case firestoreShow
 }
