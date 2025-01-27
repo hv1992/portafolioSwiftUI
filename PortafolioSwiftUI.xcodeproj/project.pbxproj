@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C50BDA3E2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */; };
 		C50BDA402D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */; };
+		C50BDA422D432945009E4B65 /* FirebaseFirestoreShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA412D432945009E4B65 /* FirebaseFirestoreShowView.swift */; };
+		C50BDA442D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BDA432D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift */; };
 		C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078262D38330500261D0C /* FirebaseAuthView.swift */; };
 		C51078292D38340F00261D0C /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */; };
 		C52E2DB42B34692700FBDD44 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E2DB32B34692700FBDD44 /* AddContactView.swift */; };
@@ -112,6 +114,8 @@
 /* Begin PBXFileReference section */
 		C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreOptionsView.swift; sourceTree = "<group>"; };
 		C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreOptionsViewModel.swift; sourceTree = "<group>"; };
+		C50BDA412D432945009E4B65 /* FirebaseFirestoreShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreShowView.swift; sourceTree = "<group>"; };
+		C50BDA432D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreShowViewModel.swift; sourceTree = "<group>"; };
 		C51078262D38330500261D0C /* FirebaseAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthView.swift; sourceTree = "<group>"; };
 		C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
 		C52E2DB32B34692700FBDD44 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
@@ -344,6 +348,7 @@
 				C51078262D38330500261D0C /* FirebaseAuthView.swift */,
 				C558D9402D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift */,
 				C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */,
+				C50BDA412D432945009E4B65 /* FirebaseFirestoreShowView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				C51078282D38340F00261D0C /* FirebaseAuthViewModel.swift */,
 				C558D9422D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift */,
 				C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */,
+				C50BDA432D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -896,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C558D9412D3F3A5B003F7A6C /* FirebaseFirestoreAddInformationView.swift in Sources */,
+				C50BDA442D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift in Sources */,
 				C51078272D38330500261D0C /* FirebaseAuthView.swift in Sources */,
 				C5782DC52A5DCD8C00584D15 /* MenuOptionCode.swift in Sources */,
 				C58049AB2A51E76100DFB03D /* AppDelegate.swift in Sources */,
@@ -953,6 +960,7 @@
 				C5C537672D1F3B7F00F312C7 /* DefaultBackgroundView.swift in Sources */,
 				C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */,
 				C5A537D12B37A23000FE7702 /* FormCellAddContactViewModel.swift in Sources */,
+				C50BDA422D432945009E4B65 /* FirebaseFirestoreShowView.swift in Sources */,
 				C5E830842A462DAC00397EAD /* OptionMainViewModel.swift in Sources */,
 				C558D9432D3F3A80003F7A6C /* FirebaseFirestoreAddInformationViewModel.swift in Sources */,
 				C5C10A5C2B373C230055511C /* DefaultButtonWhite.swift in Sources */,

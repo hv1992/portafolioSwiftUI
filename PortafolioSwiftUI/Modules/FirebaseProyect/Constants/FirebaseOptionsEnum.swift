@@ -10,4 +10,6 @@ enum FirebaseOptionsEnum {
     case firestore
     case firestoreAdd
     case firestoreShow
+    case firestoreDelete
+    case firestoreUpdate
 }

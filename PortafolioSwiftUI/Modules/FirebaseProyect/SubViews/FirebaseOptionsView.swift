@@ -32,7 +32,7 @@ struct FirebaseOptionsView: View {
                         view
                     }
                 } else if view.viewModel.firebaseOption == .firestoreShow {
-                    NavigationLink(destination: RandomDogView()) {
+                    NavigationLink(destination: FirebaseFirestoreShowView()) {
                         view
                     }
                 }

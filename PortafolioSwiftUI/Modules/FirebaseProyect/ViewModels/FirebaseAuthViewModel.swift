@@ -26,6 +26,7 @@ class FirebaseAuthViewModel : ObservableObject {
     func signInt(email: String, password : String) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
+                UserDefaults.standard.set(user?.user.email, forKey: "emailFirebaseAuth")
                 self.mensajeAlerta = "Sesión iniciada con éxito"
                 self.mostrarAlerta.toggle()
             }else{
@@ -42,6 +43,9 @@ class FirebaseAuthViewModel : ObservableObject {
     func signOut() {
         do {
             try Auth.auth().signOut()
+            self.mensajeAlerta = "Usuario deslogueado con exito"
+            self.mostrarAlerta = true
+            UserDefaults.standard.removeObject(forKey: "emailFirebaseAuth")
         } catch (let error){
             self.mensajeAlerta = error.localizedDescription
             self.mostrarAlerta.toggle()

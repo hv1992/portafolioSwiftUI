@@ -10,7 +10,7 @@ import Foundation
 class FirebaseFirestoreOptionsViewModel : ObservableObject {
     @Published var listOptions : [FirebaseOptionView] = [
         FirebaseOptionView(titleOption: "Agregar información", nameImage: "add_user", firebaseOption: .firestoreAdd),
-        FirebaseOptionView(titleOption: "Listar información", nameImage: "show_users", firebaseOption: .firestoreShow),
+        FirebaseOptionView(titleOption: "Mostrar información", nameImage: "show_user", firebaseOption: .firestoreShow)
     ]
     
     let titleFirebaseOptions : String = "Firestore Options"
