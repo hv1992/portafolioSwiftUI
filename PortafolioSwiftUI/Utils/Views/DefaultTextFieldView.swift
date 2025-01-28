@@ -15,6 +15,7 @@ enum TypeDefaultTextField {
     case passwordOnlyNumber
 }
 
+/// Diseño por defecto de un TextField, que vamos a usar especificamente en este proyecto, para asi crear armonia en el proyecto.
 struct DefaultTextFieldView: View {
     var titleTextField : String = ""
     var typeTextField : TypeDefaultTextField = .onlyText

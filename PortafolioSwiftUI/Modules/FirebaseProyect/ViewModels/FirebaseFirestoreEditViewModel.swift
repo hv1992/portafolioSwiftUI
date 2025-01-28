@@ -25,6 +25,7 @@ class FirebaseFirestoreEditViewModel : ObservableObject {
     @Published var apellidoUsuario : String = ""
     @Published var telefonoUsuario : String = ""
     
+    /// Obtenemos los datos del usuario almacenados en la firestore, para ser editados
     func getDataUser() {
         let db = Firestore.firestore()
         
@@ -34,6 +35,7 @@ class FirebaseFirestoreEditViewModel : ObservableObject {
             return
         }
         
+        //Se realiza la llamada obtener los datos
         db.collection("datosUsuarios").document(idUser).addSnapshotListener { (QuerySnapshot, error) in
             if let error = error?.localizedDescription{
                 self.messageAlert = error
@@ -48,15 +50,21 @@ class FirebaseFirestoreEditViewModel : ObservableObject {
         }
     }
     
+    /// Realiza la subida de la modificación de los datos del usuario
     func editDataUser() {
         let db = Firestore.firestore()
+        
+        //Corrobora si el usuario está logueado. En caso de que no esté, se muestra mensaje de alerta, y detiene el proceso
         guard let idUser = Auth.auth().currentUser?.uid else {
             self.messageAlert = "El usuario no está logueado"
             self.showAlert = true
             return
         }
         
+        //Estos son los campos que se van a enviar para modificar
         let campos : [String:Any] = ["nombreUsuario":nombreUsuario,"apellidoUsuario":apellidoUsuario,"telefono":telefonoUsuario]
+        
+        //Se hace la llamada para realizar la modificación de los datos
         db.collection("datosUsuarios").document(idUser).updateData(campos){error in
             if let error = error?.localizedDescription {
                 self.messageAlert = error

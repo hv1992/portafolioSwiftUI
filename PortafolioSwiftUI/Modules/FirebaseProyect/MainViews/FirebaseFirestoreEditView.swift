@@ -9,8 +9,10 @@ import SwiftUI
 
 struct FirebaseFirestoreEditView: View {
     
+    //El .init es tambien una forma de iniciar la variable con una instancia u objeto
     @ObservedObject var viewModel : FirebaseFirestoreEditViewModel = .init()
     
+    //Esto es una buena forma para no usar el state, y usar directamente las variables de la clase vista modelo
     var nombreUsuario : Binding<String> {
         return Binding<String>(get: {
             self.viewModel.nombreUsuario

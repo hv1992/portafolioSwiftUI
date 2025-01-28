@@ -26,7 +26,10 @@ class FirebaseAuthViewModel : ObservableObject {
     func signInt(email: String, password : String) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
+                
+                //Esto sirve para almacenar el correo del usuario en la memoria del telefono. Cuando se realiza el logueo
                 UserDefaults.standard.set(user?.user.email, forKey: "emailFirebaseAuth")
+                
                 self.mensajeAlerta = "Sesión iniciada con éxito"
                 self.mostrarAlerta = true
             }else{
@@ -40,15 +43,20 @@ class FirebaseAuthViewModel : ObservableObject {
         }
     }
     
+    /// Corrobora si esta almacenado el correo del usuario en la memoria del telefono
+    /// - Returns: el correo del usuario. En caso de que sea null, no está almacenado el correo en la memoria
     func getIfExistSaveUser() -> String? {
         return UserDefaults.standard.string(forKey: "emailFirebaseAuth")
     }
     
+    /// Sirve para que el usuario pueda desloguearse del firebase
     func signOut() {
         do {
             try Auth.auth().signOut()
             self.mensajeAlerta = "Usuario deslogueado con exito"
             self.mostrarAlerta = true
+            
+            //Aqui se elimina el correo almacenado de la memoria del telefono
             UserDefaults.standard.removeObject(forKey: "emailFirebaseAuth")
         } catch (let error){
             self.mensajeAlerta = error.localizedDescription

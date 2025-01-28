@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Diseño por defecto del fondo de proyecto, de tal manera para mantener el mismo fondo el todo el proyecto.
 struct DefaultBackgroundView: View {
     
     var containerView : AnyView?
