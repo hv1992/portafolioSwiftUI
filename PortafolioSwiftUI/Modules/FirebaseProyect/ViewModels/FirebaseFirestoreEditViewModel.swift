@@ -62,7 +62,8 @@ class FirebaseFirestoreEditViewModel : ObservableObject {
                 self.messageAlert = error
                 self.showAlert = true
             }else{
-                print("edito solo texto")
+                self.messageAlert = "Edición con éxito"
+                self.showAlert = true
             }
         }
     }

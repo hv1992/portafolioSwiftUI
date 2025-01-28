@@ -35,6 +35,10 @@ struct FirebaseOptionsView: View {
                     NavigationLink(destination: FirebaseFirestoreShowView()) {
                         view
                     }
+                } else if view.viewModel.firebaseOption == .firestoreUpdate {
+                    NavigationLink(destination: FirebaseFirestoreEditView()) {
+                        view
+                    }
                 }
             }
         }

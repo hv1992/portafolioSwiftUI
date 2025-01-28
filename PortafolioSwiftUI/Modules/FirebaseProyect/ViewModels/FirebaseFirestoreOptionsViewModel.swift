@@ -11,7 +11,8 @@ class FirebaseFirestoreOptionsViewModel : ObservableObject {
     @Published var listOptions : [FirebaseOptionView] = [
         FirebaseOptionView(titleOption: "Agregar información", nameImage: "add_user", firebaseOption: .firestoreAdd),
         FirebaseOptionView(titleOption: "Mostrar información", nameImage: "show_user", firebaseOption: .firestoreShow),
-        FirebaseOptionView(titleOption: "Editar información", nameImage: "show_user", firebaseOption: .firestoreUpdate)
+        FirebaseOptionView(titleOption: "Editar información", nameImage: "edit_user", firebaseOption: .firestoreUpdate),
+        FirebaseOptionView(titleOption: "Eliminar información", nameImage: "delete_user_data", firebaseOption: .firestoreDelete)
     ]
     
     let titleFirebaseOptions : String = "Firestore Options"
