@@ -42,13 +42,11 @@ struct FirebaseAuthView: View {
                 .navigationTitle(self.viewModel.titleNavigationBar)
                 .alert(isPresented: mostrarAlerta) {
                     Alert(title: Text("Error"), message: Text(self.viewModel.mensajeAlerta))
+                }.onAppear {
+                    self.usuarioText = self.viewModel.getIfExistSaveUser() ?? ""
                 }
         ))
         
     }
-}
-
-#Preview {
-    FirebaseAuthView()
 }
 

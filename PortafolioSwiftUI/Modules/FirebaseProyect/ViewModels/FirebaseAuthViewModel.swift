@@ -28,16 +28,20 @@ class FirebaseAuthViewModel : ObservableObject {
             if user != nil {
                 UserDefaults.standard.set(user?.user.email, forKey: "emailFirebaseAuth")
                 self.mensajeAlerta = "Sesión iniciada con éxito"
-                self.mostrarAlerta.toggle()
+                self.mostrarAlerta = true
             }else{
                 if let error = error?.localizedDescription {
                     self.mensajeAlerta = error
                 }else{
                     self.mensajeAlerta = "Error desconocido"
                 }
-                self.mostrarAlerta.toggle()
+                self.mostrarAlerta = true
             }
         }
+    }
+    
+    func getIfExistSaveUser() -> String? {
+        return UserDefaults.standard.string(forKey: "emailFirebaseAuth")
     }
     
     func signOut() {
@@ -48,7 +52,7 @@ class FirebaseAuthViewModel : ObservableObject {
             UserDefaults.standard.removeObject(forKey: "emailFirebaseAuth")
         } catch (let error){
             self.mensajeAlerta = error.localizedDescription
-            self.mostrarAlerta.toggle()
+            self.mostrarAlerta = true
         }
     }
 }
