@@ -39,6 +39,10 @@ struct FirebaseOptionsView: View {
                     NavigationLink(destination: FirebaseFirestoreEditView()) {
                         view
                     }
+                } else if view.viewModel.firebaseOption == .firestoreDelete {
+                    NavigationLink(destination: FirebaseFirestoreDeleteView()) {
+                        view
+                    }
                 }
             }
         }

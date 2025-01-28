@@ -94,6 +94,8 @@
 		C5F4D0122D1E5349001A0BD4 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4D0112D1E5346001A0BD4 /* GlobalModel.swift */; };
 		C5F8AA782D48354700E19B3C /* FirebaseFirestoreEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8AA772D48354700E19B3C /* FirebaseFirestoreEditView.swift */; };
 		C5F8AA7A2D48356200E19B3C /* FirebaseFirestoreEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8AA792D48356200E19B3C /* FirebaseFirestoreEditViewModel.swift */; };
+		C5F8AA7C2D48923C00E19B3C /* FirebaseFirestoreDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8AA7B2D48923C00E19B3C /* FirebaseFirestoreDeleteView.swift */; };
+		C5F8AA7E2D4893CA00E19B3C /* FirebaseFirestoreDeleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8AA7D2D4893CA00E19B3C /* FirebaseFirestoreDeleteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +199,8 @@
 		C5F4D0112D1E5346001A0BD4 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 		C5F8AA772D48354700E19B3C /* FirebaseFirestoreEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreEditView.swift; sourceTree = "<group>"; };
 		C5F8AA792D48356200E19B3C /* FirebaseFirestoreEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreEditViewModel.swift; sourceTree = "<group>"; };
+		C5F8AA7B2D48923C00E19B3C /* FirebaseFirestoreDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreDeleteView.swift; sourceTree = "<group>"; };
+		C5F8AA7D2D4893CA00E19B3C /* FirebaseFirestoreDeleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreDeleteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +358,7 @@
 				C50BDA3D2D431769009E4B65 /* FirebaseFirestoreOptionsView.swift */,
 				C50BDA412D432945009E4B65 /* FirebaseFirestoreShowView.swift */,
 				C5F8AA772D48354700E19B3C /* FirebaseFirestoreEditView.swift */,
+				C5F8AA7B2D48923C00E19B3C /* FirebaseFirestoreDeleteView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				C50BDA3F2D431DF0009E4B65 /* FirebaseFirestoreOptionsViewModel.swift */,
 				C50BDA432D432960009E4B65 /* FirebaseFirestoreShowViewModel.swift */,
 				C5F8AA792D48356200E19B3C /* FirebaseFirestoreEditViewModel.swift */,
+				C5F8AA7D2D4893CA00E19B3C /* FirebaseFirestoreDeleteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -925,6 +931,7 @@
 				C558D9452D3F3C61003F7A6C /* DefaultTextFieldView.swift in Sources */,
 				C5C8389F2A58AB2F00270DCB /* RandomDogViewModel.swift in Sources */,
 				C5637F5C2D35A6D600E91E3C /* FirebaseProyectOptionsViewModel.swift in Sources */,
+				C5F8AA7C2D48923C00E19B3C /* FirebaseFirestoreDeleteView.swift in Sources */,
 				C58049AE2A5241CE00DFB03D /* RandomCatCellView.swift in Sources */,
 				C58DB7652D322E3300504FEF /* FirebaseOptionViewModel.swift in Sources */,
 				C5C10A5E2B3743DC0055511C /* FormCellAddContactView.swift in Sources */,
@@ -964,6 +971,7 @@
 				C5C537692D1F400500F312C7 /* ListaGridViewModel.swift in Sources */,
 				C58DB75F2D32122D00504FEF /* FirebaseOptionsEnum.swift in Sources */,
 				C5F8AA782D48354700E19B3C /* FirebaseFirestoreEditView.swift in Sources */,
+				C5F8AA7E2D4893CA00E19B3C /* FirebaseFirestoreDeleteViewModel.swift in Sources */,
 				C5F4D0122D1E5349001A0BD4 /* GlobalModel.swift in Sources */,
 				C5C537672D1F3B7F00F312C7 /* DefaultBackgroundView.swift in Sources */,
 				C5A537D32B37A7FC00FE7702 /* FormAddContactViewModel.swift in Sources */,
